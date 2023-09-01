@@ -1,6 +1,6 @@
 import videoFile from '../../assets/video (1080p).mp4';
 // eslint-disable-next-line no-unused-vars
-import styles from './Video.css'
+import styles from './video.css'
 import MaquinaEscrever from '../MaquinaEscrever';
 
 
