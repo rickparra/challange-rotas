@@ -1,0 +1,20 @@
+/* Original styles for active link */
+.linkDestacado {
+    color: #000; /* Change active link color to white */
+    background: #fff;
+  }
+  
+  .linkNormal{
+    color: #fff;
+  }
+  
+  .linkNormal.scrolled{
+    color: #000000;
+  }
+  
+  /* New styles for scrolled state */
+  .linkDestacado.scrolled {
+    color: #fff; /* Change active link color to black when scrolled */
+    background: #000;
+  }
+  

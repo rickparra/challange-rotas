@@ -1,0 +1,155 @@
+:root {
+    --color-primary: #FF6A00;
+    --color-secondary: #000000;
+    --color-text: #d8d8d8;
+    --color-button: #FFC107;
+    --color-button-hover: #0077ff;
+    --color-bg: #F5F5F5;
+    --bg-menu: #FFFFFF;
+  }
+  
+  header {
+    position: sticky !important;
+    top: 0;
+    z-index: 1000000;
+    width: 100%;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 100px;
+    background-color: #000000;
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.75);
+    transition: height 0.5s ease;
+    transition: background-color 0.5s ease; /* Add background-color transition */
+  }
+
+  .header.scrolled {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .logo {
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+
+  .logoScrolled {
+    color: rgb(0, 0, 0); /* Change logo color to white */
+  }
+  
+  .hamburguer {
+    display: none;
+  }
+
+  .hamburguer.scrolled{
+    background-color: aqua;
+  }
+  
+  .nav-bar ul {
+    display: flex;
+  }
+  
+  .nav-bar ul li a {
+    display: block;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+    text-decoration: none;
+  }
+
+  .nav-bar.scrolled ul li a {
+    color: rgb(0, 0, 0); 
+  }
+  
+  .nav-bar ul li a:hover {
+    color: var(--color-text);
+    background: var(--color-button-hover);
+  }
+  
+  @media only screen and (max-width: 1390px){
+    header{
+      padding: 0 50px;
+    }
+  }
+  
+  @media only screen and (max-width: 1292px){
+    header{
+      padding: 0 30px;
+    }
+  }
+
+  @media only screen and (max-width: 1257px){
+    header{
+      padding: 0 20px;
+    }
+  }
+
+  @media only screen and (max-width: 1094px){
+    header{
+      padding: 0 10px;
+    }
+  }
+
+  @media only screen and (max-width: 1074px){
+    header{
+      padding: 0 0px;
+    }
+  }
+
+  @media only screen and (max-width: 600px){
+    .logo-img{
+      max-width: 21rem;
+    }
+  }
+  @media only screen and (max-width: 1005px){
+    .hamburguer{
+      display: block;
+      cursor: pointer;
+    }
+    .hamburguer .line{
+      width: 30px;
+      height: 3px;
+      background: var(--color-secondary);
+      margin: 6px 0;
+    }
+    .nav-bar{
+      height: 0px;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: var(--color-bg);
+      transition: 0.2s;
+      overflow: hidden;
+      top: 100%; /* Define a distância em relação ao topo */
+    }
+  
+    .nav-bar.active{
+      height: 340px;
+      transform: translateY(0%); /* Exibe o menu no topo da tela */
+      box-shadow: 0px 5px 5px -5px rgba(255, 255, 255, 0.75);
+    }
+  
+    .nav-bar ul{
+      display: block;
+      width: fit-content;
+      margin: 45px auto 0 auto;
+      text-align: center;
+      transition: 0.5s;
+      opacity: 0;
+    }
+  
+    .nav-bar.active ul{
+      opacity: 1;
+    }
+  
+    .nav-bar ul li a{
+      margin-bottom: 12px;
+      color: var(--color-text);
+    }
+  }
