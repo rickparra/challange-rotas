@@ -53,7 +53,7 @@ export default function Menu() {
             <MenuLink to="/" onClick={closeMenu}>Home</MenuLink>
           </li>
           <li>
-            <MenuLink to="/sobre" onClick={closeMenu}>Sobre Nós</MenuLink>
+            <MenuLink to="/about" onClick={closeMenu}>Sobre Nós</MenuLink>
           </li>
         </ul>
       </nav>

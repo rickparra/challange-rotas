@@ -1,0 +1,45 @@
+.card-container{
+    background-color: rgb(255, 255, 255);
+    width: 22rem;
+    height: 30rem;
+    overflow: hidden;
+    transition: 0.6s;
+    animation: ease-in;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(70, 70, 70, 0.205);
+    
+}
+
+.card-container:hover{
+    box-shadow: 0px 0px 15px -5px;
+    transform: scale(1.1);
+}
+
+.image-container img{
+    overflow: hidden;
+    height: 233.2px;
+
+}
+
+.card-content{
+    margin: 1rem;
+    margin-top: 0.5rem;
+}
+
+h3,p{
+    margin: 0;
+    padding: 0;
+}
+
+.card-title{
+    margin-bottom: 0.5 rem;
+}
+
+h3{
+    font-size: 25px;
+}
+
+.card-body p{
+    font-size: 18px;
+}

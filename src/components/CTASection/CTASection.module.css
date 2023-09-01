@@ -1,0 +1,17 @@
+.CTASection{
+    min-height: 31rem;
+    background-color: #262625;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2{
+    font-size: 55px;
+}
+
+p{
+    font-size: 30px;
+}

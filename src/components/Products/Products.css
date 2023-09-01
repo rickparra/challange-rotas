@@ -1,0 +1,17 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: fit-content;
+  margin-left: 0px;
+}
+
+.products p {
+  background-color: #0077ff;
+  font-size: 18px;
+  width: 18.8rem;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+}
