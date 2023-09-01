@@ -55,6 +55,12 @@ export default function Menu() {
           <li>
             <MenuLink to="/about" onClick={closeMenu}>Sobre Nós</MenuLink>
           </li>
+          <li>
+            <MenuLink to="/login" onClick={closeMenu}>Login</MenuLink>
+          </li>
+          <li>
+            <MenuLink to="/feed" onClick={closeMenu}>Feed</MenuLink>
+          </li>
         </ul>
       </nav>
     </header>
