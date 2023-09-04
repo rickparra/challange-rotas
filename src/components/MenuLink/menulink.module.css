@@ -17,4 +17,10 @@
     color: #fff; /* Change active link color to black when scrolled */
     background: #000;
   }
-  
+
+  @media only screen and (max-width: 1005px){
+    .linkDestacado{
+      background-color: #ffffff;
+      color: #000;
+    }
+  }

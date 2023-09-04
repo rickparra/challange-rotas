@@ -43,8 +43,12 @@
     display: none;
   }
 
-  .hamburguer.scrolled{
-    background-color: aqua;
+  .line{
+    background-color: #F5F5F5;
+  }
+
+  .line.scrolled{
+    background-color: #000000;
   }
   
   .nav-bar ul {
@@ -59,10 +63,6 @@
     transition: 0.2s;
     margin: 0 5px;
     text-decoration: none;
-  }
-
-  .nav-bar.scrolled ul li a {
-    color: rgb(0, 0, 0); 
   }
   
   .nav-bar ul li a:hover {
@@ -113,7 +113,6 @@
     .hamburguer .line{
       width: 30px;
       height: 3px;
-      background: var(--color-secondary);
       margin: 6px 0;
     }
     .nav-bar{
@@ -122,17 +121,21 @@
       top: 75px;
       left: 0;
       right: 0;
-      width: 100vw;
-      background: var(--color-bg);
+      width: 100%;
       transition: 0.2s;
       overflow: hidden;
       top: 100%; /* Define a distância em relação ao topo */
     }
+
+    .nav-bar.active.scrolled{
+      background: #b8b8b8;
+    }
   
     .nav-bar.active{
+      background: #070707;
       height: 340px;
       transform: translateY(0%); /* Exibe o menu no topo da tela */
-      box-shadow: 0px 5px 5px -5px rgba(255, 255, 255, 0.75);
+      box-shadow: 0px 5px 5px -5px rgba(70, 70, 70, 0.75);
     }
   
     .nav-bar ul{
@@ -150,6 +153,5 @@
   
     .nav-bar ul li a{
       margin-bottom: 12px;
-      color: var(--color-text);
     }
   }

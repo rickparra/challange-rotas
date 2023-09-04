@@ -46,7 +46,7 @@ export default function Menu() {
       </div>
 
       <nav
-        className={`${styles['nav-bar']} ${menuOpen ? styles.active : ''}`}
+        className={`${styles['nav-bar']} ${menuOpen ? styles.active : ''} ${isScrolled ? styles.scrolled : ''}`}
       >
         <ul>
           <li>
