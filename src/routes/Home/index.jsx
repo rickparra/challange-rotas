@@ -5,9 +5,29 @@ import Diagrama from '../../components/PlataformDiagram';
 import Products from '../../components/Products';
 
 export default function Home() {
+
+    const imgAvenidaPaulista = 'paulista-cima.jpg'
+    const imgTotem = 'toten-rua.webp'
+
     return (
         <div className={styles.inicioContainer}>
             <VideoComponent />
+
+            <div className="contexto">
+                <div className="tituloDiagrama">
+                    <h1>Transformando São Paulo em uma </h1>
+                    <h1>Cidade Mais Segura e Inteligente</h1>
+                </div>
+                <div className="explica">
+                    <p>
+                        No coração da maior metrópole do Brasil, o UrbanShield está liderando uma revolução na segurança urbana. 
+                        Com a visão de utilizar a tecnologia para enfrentar os desafios do ambiente urbano, nossos totens digitais estão 
+                        estrategicamente posicionados em toda a cidade, coletando dados valiosos que são essenciais para tornar São Paulo 
+                        um lugar mais seguro para todos.
+                    </p>
+                </div>
+            </div>
+
 
             <div className="cardsContainer">
 
@@ -88,7 +108,49 @@ export default function Home() {
             </div>
 
             <div className="mid-site-2">
-                    
+
+            {/* Primeira Parte */}
+            <div className="top-2">
+                <div className="left">
+                    <div className="tituloDiagrama">
+                        <h1>Smart cities points</h1>
+                        <h1>Nossos totens digitais</h1>
+                    </div>
+
+                    <div className="coment-container">
+                        <p>
+                            Nossos totens UrbanShield são os pilares da nossa missão de tornar São Paulo uma cidade mais segura e inteligente. Com a visão de utilizar a tecnologia para combater desafios urbanos, esses dispositivos inovadores estão espalhados estrategicamente por toda a cidade, coletando dados valiosos que são essenciais para a criação de comunidades mais seguras.
+                        </p>
+
+                        {/* Texto adicional, se necessário */}
+                    </div>
+                </div>
+
+                <div className="container-paulista">
+                    {/* Primeira imagem da Avenida Paulista */}
+                    <img src={imgAvenidaPaulista} alt="Avenida Paulista" id='imgPaulista'/>
+                </div>
+            </div>
+
+            {/* Segunda Parte */}
+            <div className="top-2">
+                <div className="left">
+                    {/* Texto adicional, se necessário */}
+                </div>
+                
+                <div className="container-paulista">
+                    <img src={imgTotem} alt="Totem UrbanShield" id='imgTotem'/>
+                </div>
+
+                <div className="coment-container">
+                    <p>
+                        Em um mundo cada vez mais conectado, reconhecemos a importância de ter acesso a informações em tempo real. É por isso que os totens UrbanShield estão equipados com uma variedade de sensores avançados, que captam uma ampla gama de dados relevantes para a segurança urbana.
+                    </p>
+
+                    {/* Texto adicional, se necessário */}
+                </div>
+            </div>
+        
             </div>
 
         </div>
