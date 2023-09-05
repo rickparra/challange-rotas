@@ -2,13 +2,8 @@
     --color-text: #d8d8d8;
 }
 
-body, * {
-  border: 1px solid #f80000; /* Adiciona uma borda vermelha de 1 pixel de largura a todos os elementos */
-}
-
 body {
   background-color: #E5E4DF;
-  border: 1px solid #f80000; /* Adiciona uma borda vermelha de 1 pixel de largura */
 }
 
 
@@ -28,7 +23,7 @@ body {
   margin: 0; /* Remove margens padrão do parágrafo */
   text-align: center;
   margin-top: 5rem;
-  font-size: 26px; /* Tamanho da fonte para o parágrafo */
+  font-size: 23px; /* Tamanho da fonte para o parágrafo */
   line-height: 1.5; /* Espaçamento entre linhas para melhor legibilidade */
   color: #333; /* Cor do texto (pode ajustar conforme necessário) */
 }
@@ -40,7 +35,7 @@ body {
 }
 
 .tituloContexto h1 {
-  font-size: 50px; /* Tamanho da fonte para os títulos h1 */
+  font-size: 60px; /* Tamanho da fonte para os títulos h1 */
   margin: 0; /* Remova a margem inferior para que fiquem grudados */
   line-height: 1; /* Ajuste o espaçamento vertical */
 }
@@ -68,7 +63,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 17rem;
+    width: 20rem;
 }
 
 .Diagrama-Alpha{
@@ -77,6 +72,13 @@ body {
     justify-content: center;
     padding-top: 4rem;
     padding-bottom: 5rem;
+    gap: 5rem;
+}
+
+@media only screen and (max-width: 1160px){
+  .Diagrama-Alpha{
+    gap: 1rem;
+  }
 }
 
 @media only screen and (max-width: 960px){
