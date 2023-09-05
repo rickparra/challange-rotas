@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from "./Feed.module.css";
 import GroupList from '../../components/GroupList';
 import ChatScreen from '../../components/ChatScreen';
-
+import MapContent from '../../components/MapComponent';
 
 function Feed() {
   const [groups, setGroups] = useState([]);
@@ -39,43 +39,40 @@ function Feed() {
     window.location.reload();
   }
 
-
   return (
+    <div className={styles.feedContent}>
+      <div className={styles.left}>
+        <MapContent />
+      </div>
 
+      <div className={styles.right}>
+        <div className={`${styles.feedContainer}`}>
+          <h1 className={styles.feedTitle}>Feed</h1>
 
+          {!currentGroup && (
+            <div>
+              <button onClick={handleClick}>sair da conta</button>
 
-    <div className={styles.feedContainer}>
-
-      <div className={`${styles.feedContainer} ${styles.rightAlign}`}>
-
-        <h1 className={styles.feedTitle}>Feed</h1>
-
-        {!currentGroup && (
-          <div>
-
-            <button onClick={handleClick}>sair da conta</button>
-
-            <div className={styles.groupForm}>
-              <input
-                type="text"
-                placeholder="Nome do grupo"
-                value={newGroupName}
-                onChange={e => setNewGroupName(e.target.value)}
-              />
-              <button onClick={createGroup}>Criar Grupo</button>
+              <div className={styles.groupForm}>
+                <input
+                  type="text"
+                  placeholder="Nome do grupo"
+                  value={newGroupName}
+                  onChange={e => setNewGroupName(e.target.value)}
+                />
+                <button onClick={createGroup}>Criar Grupo</button>
+              </div>
+              <GroupList groups={groups} handleGroupClick={handleGroupClick} />
             </div>
-            <GroupList groups={groups} handleGroupClick={handleGroupClick} />
-          </div>
-        )}
+          )}
 
-        {currentGroup && (
-          <ChatScreen
-            currentGroup={currentGroup}
-            handleBackToGroups={handleBackToGroups}
-          />
-        )}
-
-
+          {currentGroup && (
+            <ChatScreen
+              currentGroup={currentGroup}
+              handleBackToGroups={handleBackToGroups}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

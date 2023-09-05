@@ -1,7 +1,22 @@
+.feedContent {
+  display: flex;
+  flex-direction: row; /* Altere a direção do flexbox para linha */
+  justify-content: space-between; /* Distribua os elementos ao longo do eixo principal */
+}
+
+.left {
+  flex: 1; /* Permita que o mapa expanda e ocupe o espaço disponível */
+}
+
+.right {
+  flex: 1; /* Permita que o chat expanda e ocupe o espaço disponível */
+  margin-left: 20px; /* Adicione uma margem à esquerda para separar os elementos */
+}
+
 .feedContainer {
   max-width: 400px;
   margin: 0 0 0 auto;
-  /* Define margin-left como auto */
+  min-height: 50VW;
   padding: 20px;
   border: 1px solid #e4e4e4;
   border-radius: 10px;
