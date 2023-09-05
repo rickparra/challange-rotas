@@ -13,9 +13,9 @@ import Feed from './routes/Feed'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
-    errorElement: <Error/>,
-    children:[
+    element: <App />,
+    errorElement: <Error />,
+    children: [
       {
         path: "/",
         element: <Home />

@@ -7,7 +7,7 @@ export default function Error() {
     const navegar = useNavigate();
 
 
-    return(
+    return (
         <>
             <div className={styles.conteudoContainer}>
                 <span className={styles.texto404}>404</span>
@@ -24,17 +24,17 @@ export default function Error() {
                     Aguarde uns instantes e recarregue a página, ou volte a página inicial.
                 </p>
 
-                <div 
-                className={styles.botaoContainer}
-                onClick={()=> navegar(-1)}
+                <div
+                    className={styles.botaoContainer}
+                    onClick={() => navegar(-1)}
                 >
                     <BotaoPrincipal tamanho="lg">Voltar</BotaoPrincipal>
                 </div>
 
-                <img 
-                className={styles.imagemCachorro} 
-                src={erro_404} 
-                alt="cachorro"
+                <img
+                    className={styles.imagemCachorro}
+                    src={erro_404}
+                    alt="cachorro"
                 />
             </div>
 

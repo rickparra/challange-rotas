@@ -3,6 +3,7 @@ import styles from "./Feed.module.css";
 import GroupList from '../../components/GroupList';
 import ChatScreen from '../../components/ChatScreen';
 
+
 function Feed() {
   const [groups, setGroups] = useState([]);
   const [newGroupName, setNewGroupName] = useState('');
@@ -37,39 +38,45 @@ function Feed() {
     localStorage.clear();
     window.location.reload();
   }
-  
+
 
   return (
 
-    
+
 
     <div className={styles.feedContainer}>
-      <h1 className={styles.feedTitle}>Feed</h1>
 
-      {!currentGroup && (
-        <div>
+      <div className={`${styles.feedContainer} ${styles.rightAlign}`}>
 
-        <button onClick={handleClick}>sair da conta</button>
+        <h1 className={styles.feedTitle}>Feed</h1>
 
-          <div className={styles.groupForm}>
-            <input
-              type="text"
-              placeholder="Nome do grupo"
-              value={newGroupName}
-              onChange={e => setNewGroupName(e.target.value)}
-            />
-            <button onClick={createGroup}>Criar Grupo</button>
+        {!currentGroup && (
+          <div>
+
+            <button onClick={handleClick}>sair da conta</button>
+
+            <div className={styles.groupForm}>
+              <input
+                type="text"
+                placeholder="Nome do grupo"
+                value={newGroupName}
+                onChange={e => setNewGroupName(e.target.value)}
+              />
+              <button onClick={createGroup}>Criar Grupo</button>
+            </div>
+            <GroupList groups={groups} handleGroupClick={handleGroupClick} />
           </div>
-          <GroupList groups={groups} handleGroupClick={handleGroupClick} />
-        </div>
-      )}
+        )}
 
-      {currentGroup && (
-        <ChatScreen
-          currentGroup={currentGroup}
-          handleBackToGroups={handleBackToGroups}
-        />
-      )}
+        {currentGroup && (
+          <ChatScreen
+            currentGroup={currentGroup}
+            handleBackToGroups={handleBackToGroups}
+          />
+        )}
+
+
+      </div>
     </div>
   );
 }

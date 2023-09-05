@@ -22,19 +22,19 @@ export default function LoginLogout() {
     setIsSignUpMode(false);
   };
 
-  const username=useRef()
-  const email=useRef()
-  const password=useRef()
-  const getUserName=localStorage.getItem("usernameData")
-  const getPassword=localStorage.getItem("passwordData")
+  const username = useRef()
+  const email = useRef()
+  const password = useRef()
+  const getUserName = localStorage.getItem("usernameData")
+  const getPassword = localStorage.getItem("passwordData")
 
-  const handlesubmit=()=>{
-      if (username.current.value=="asdf"&&password.current.value=="12345"){
-        localStorage.setItem("usernameData", "asdf")
-        localStorage.setItem("passwordData", "12345")
-      }
+  const handlesubmit = () => {
+    if (username.current.value == "asdf" && password.current.value == "12345") {
+      localStorage.setItem("usernameData", "asdf")
+      localStorage.setItem("passwordData", "12345")
+    }
   }
-  
+
 
   return (
     getUserName && getPassword ? (
@@ -51,7 +51,7 @@ export default function LoginLogout() {
               </div>
               <div className={styles["input-field"]}>
                 <i className={`fas fa-lock ${styles.icon}`}></i>
-                <input type="password" placeholder="Password" ref={password}/>
+                <input type="password" placeholder="Password" ref={password} />
               </div>
               <input type="submit" value="Entrar Conta" className={`${styles.btn} ${styles.solid}`} />
               <p className={styles["social-text"]}>Ou entre com plataformas sociais</p>

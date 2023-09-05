@@ -1,5 +1,5 @@
-:root{
-    --color-text: #d8d8d8;
+:root {
+  --color-text: #d8d8d8;
 }
 
 body {
@@ -9,48 +9,62 @@ body {
 
 .contexto {
   padding: 3rem;
-  background-color: #ffffff; /* Cor de fundo (pode ajustar conforme necessário) */
-  padding-bottom: 8rem; /* Espaço entre o título e o parágrafo */
+  background-color: #ffffff;
+  /* Cor de fundo (pode ajustar conforme necessário) */
+  padding-bottom: 8rem;
+  /* Espaço entre o título e o parágrafo */
 }
 
 .explica {
-  padding: 20px; /* Espaçamento interno da div */
-  text-align: center; /* Centraliza o texto na div */
+  padding: 20px;
+  /* Espaçamento interno da div */
+  text-align: center;
+  /* Centraliza o texto na div */
 }
 
 .explica p {
-  line-height: 1.5; /* Espaçamento entre linhas para melhor legibilidade */
-  margin: 0; /* Remove margens padrão do parágrafo */
+  line-height: 1.5;
+  /* Espaçamento entre linhas para melhor legibilidade */
+  margin: 0;
+  /* Remove margens padrão do parágrafo */
   text-align: center;
   margin-top: 5rem;
-  font-size: 23px; /* Tamanho da fonte para o parágrafo */
-  line-height: 1.5; /* Espaçamento entre linhas para melhor legibilidade */
-  color: #333; /* Cor do texto (pode ajustar conforme necessário) */
+  font-size: 23px;
+  /* Tamanho da fonte para o parágrafo */
+  line-height: 1.5;
+  /* Espaçamento entre linhas para melhor legibilidade */
+  color: #333;
+  /* Cor do texto (pode ajustar conforme necessário) */
 }
 
 
 .tituloContexto {
-  padding: 20px; /* Espaçamento interno da div */
-  text-align: center; /* Centraliza o texto na div */
+  padding: 20px;
+  /* Espaçamento interno da div */
+  text-align: center;
+  /* Centraliza o texto na div */
 }
 
 .tituloContexto h1 {
-  font-size: 60px; /* Tamanho da fonte para os títulos h1 */
-  margin: 0; /* Remova a margem inferior para que fiquem grudados */
-  line-height: 1; /* Ajuste o espaçamento vertical */
+  font-size: 60px;
+  /* Tamanho da fonte para os títulos h1 */
+  margin: 0;
+  /* Remova a margem inferior para que fiquem grudados */
+  line-height: 1;
+  /* Ajuste o espaçamento vertical */
 }
 
 
 .cardsContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    gap: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 5rem;
 }
 
-@media only screen and (max-width: 1245px){
-  .cardsContainer{
+@media only screen and (max-width: 1245px) {
+  .cardsContainer {
     flex-direction: column;
     gap: 1rem;
     padding: 0px;
@@ -58,34 +72,35 @@ body {
   }
 }
 
-.ColunasDiagramas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 20rem;
+.ColunasDiagramas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
 }
 
-.Diagrama-Alpha{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 4rem;
-    padding-bottom: 5rem;
-    gap: 5rem;
+.Diagrama-Alpha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  gap: 5rem;
 }
 
-@media only screen and (max-width: 1160px){
-  .Diagrama-Alpha{
+@media only screen and (max-width: 1160px) {
+  .Diagrama-Alpha {
     gap: 1rem;
   }
 }
 
-@media only screen and (max-width: 960px){
-  .Diagrama-Alpha{
+@media only screen and (max-width: 960px) {
+  .Diagrama-Alpha {
     flex-direction: column;
   }
-  .ColunasDiagramas{
+
+  .ColunasDiagramas {
     padding-top: 3rem;
   }
 }
@@ -95,15 +110,17 @@ body {
   margin-left: 7rem;
 }
 
-@media only screen and (max-width: 500px){
-  .tituloDiagrama{
+@media only screen and (max-width: 500px) {
+  .tituloDiagrama {
     margin-left: 1rem;
   }
-  .tituloContexto h1{
+
+  .tituloContexto h1 {
     margin-left: 1rem;
     font-size: 40px;
   }
-  .coment-container p{
+
+  .coment-container p {
     font-size: 20px;
   }
 }
@@ -129,13 +146,13 @@ body {
   justify-content: center;
 }
 
-.mid-site h1{
+.mid-site h1 {
   color: var(--color-text);
   font-size: 42px;
   text-align: center;
 }
 
-.mid-site-2{
+.mid-site-2 {
   background-color: #ffffff;
   margin-top: 3rem;
   padding-top: 5rem;
@@ -144,11 +161,11 @@ body {
   min-height: 30rem;
 }
 
-.top-2{
+.top-2 {
   display: flex;
 }
 
-.container-paulista{
+.container-paulista {
   margin-top: 8rem;
   display: flex;
   align-items: center;
@@ -157,16 +174,16 @@ body {
   min-width: 50%;
 }
 
-#imgPaulista  {
+#imgPaulista {
   border-radius: 30%;
   width: 70%;
 }
 
-#imgTotem{
+#imgTotem {
   width: 80%;
 }
 
-.coment-container p{
+.coment-container p {
   font-size: 25px;
   padding-left: 4rem;
   text-align: left;
@@ -174,24 +191,30 @@ body {
   margin-top: 7rem;
 }
 
-@media only screen and (max-width: 1200px){
-  .top-2{
+@media only screen and (max-width: 1200px) {
+  .top-2 {
     flex-direction: column;
   }
-  .mid-site-2{
+
+  .mid-site-2 {
     padding-bottom: 2rem;
   }
-  .coment-container p{
+
+  .coment-container p {
     padding-left: 10px;
   }
-  #imgPaulista, #imgTotem{
+
+  #imgPaulista,
+  #imgTotem {
     width: 1px;
   }
-  .coment-container p{
+
+  .coment-container p {
     margin-top: 2rem;
   }
+
   .container-paulista,
-    .container-totem {
-        display: none;
-    }
+  .container-totem {
+    display: none;
+  }
 }

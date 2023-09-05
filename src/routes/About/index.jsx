@@ -19,7 +19,7 @@ export default function About() {
 
                 <div className={styles.sub_title}>
                     <h3>
-                    A UrbanShield é desenvolvida pelos estudantes da FIAP, visa solucionar a segurança, principal obstáculo para transformar São Paulo em uma smart city.
+                        A UrbanShield é desenvolvida pelos estudantes da FIAP, visa solucionar a segurança, principal obstáculo para transformar São Paulo em uma smart city.
                     </h3>
                 </div>
 
@@ -27,7 +27,7 @@ export default function About() {
 
             </div>
 
-            <LinhaDivisora/>
+            <LinhaDivisora />
 
             <div className={styles.nossasIdeias}>
                 <div className={styles.esquerda}>
@@ -132,8 +132,8 @@ export default function About() {
             </div>
 
             <CtaSection
-            title="Venha fazer parte do presente"
-            text="Crie sua conta e participe da nossa comunidade."
+                title="Venha fazer parte do presente"
+                text="Crie sua conta e participe da nossa comunidade."
             />
 
         </>

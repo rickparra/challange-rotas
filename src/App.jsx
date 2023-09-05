@@ -5,11 +5,11 @@ import Menu from "./components/Menu";
 import Rodape from "./components/Rodape";
 
 function App() {
-  return(
+  return (
     <>
-    <Menu/>
-    <Outlet/>
-    <Rodape/>
+      <Menu />
+      <Outlet />
+      <Rodape />
     </>
   )
 }
