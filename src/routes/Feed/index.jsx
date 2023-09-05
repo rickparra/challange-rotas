@@ -33,12 +33,24 @@ function Feed() {
     setCurrentGroup(null);
   }
 
+  const handleClick = () => {
+    localStorage.clear();
+    window.location.reload();
+  }
+  
+
   return (
+
+    
+
     <div className={styles.feedContainer}>
       <h1 className={styles.feedTitle}>Feed</h1>
 
       {!currentGroup && (
         <div>
+
+        <button onClick={handleClick}>sair da conta</button>
+
           <div className={styles.groupForm}>
             <input
               type="text"
