@@ -32,11 +32,11 @@ export default function Menu() {
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
-      <div className={`${styles.logo} ${isScrolled ? styles.logoScrolled : ''}`}>  
+      <div className={`${styles.logo} ${isScrolled ? styles.logoScrolled : ''}`}>
         <h1>UrbanShield</h1>
       </div>
 
-      <div 
+      <div
         className={styles.hamburguer}
         onClick={toggleMenu}
       >
