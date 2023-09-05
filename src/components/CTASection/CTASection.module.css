@@ -1,4 +1,4 @@
-.CTASection{
+.CTASection {
     min-height: 31rem;
     background-color: #262625;
     color: #ffffff;
@@ -6,12 +6,28 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-h2{
+  }
+  
+  h2 {
     font-size: 55px;
-}
-
-p{
+  }
+  
+  p {
     font-size: 30px;
-}
+  }
+  
+  /* Consulta de mídia para telas menores que 900px */
+  @media screen and (max-width: 900px) {
+    .CTASection {
+      padding: 20px; /* Adicione algum espaçamento interno para melhorar a legibilidade */
+    }
+  
+    h2 {
+      font-size: 40px; /* Diminua o tamanho da fonte para telas menores */
+    }
+  
+    p {
+      font-size: 24px; /* Diminua o tamanho da fonte para telas menores */
+    }
+  }
+  

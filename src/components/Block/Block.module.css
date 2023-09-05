@@ -19,7 +19,7 @@
     color: #000000; 
   }
   
-  @media (max-width: 735px) {
+  @media (max-width: 800px) {
     .block {
       width: 100%;
     }
