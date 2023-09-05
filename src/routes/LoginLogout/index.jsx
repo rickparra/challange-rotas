@@ -22,85 +22,161 @@ export default function LoginLogout() {
     setIsSignUpMode(false);
   };
 
-  const username = useRef()
-  const email = useRef()
-  const password = useRef()
-  const getUserName = localStorage.getItem("usernameData")
-  const getPassword = localStorage.getItem("passwordData")
+  const [userData, setUserData] = useState({
+    username: '',
+    email: '',
+    password: '',
+  });
 
-  const handlesubmit = () => {
-    if (username.current.value == "asdf" && password.current.value == "12345") {
-      localStorage.setItem("usernameData", "asdf")
-      localStorage.setItem("passwordData", "12345")
-    }
-  }
+  const username = useRef();
+  const email = useRef();
+  const password = useRef();
+  const getUserName = localStorage.getItem('usernameData');
+  const getPassword = localStorage.getItem('passwordData');
+  const [showFeed, setShowFeed] = useState(false);
 
 
   return (
-    getUserName && getPassword ? (
+    showFeed ? (
       <Feed />
     ) : (
-      <div className={`${styles.container} ${isSignUpMode ? styles["sign-up-mode"] : ""}`}>
+      <div className={`${styles.container} ${isSignUpMode ? styles['sign-up-mode'] : ''}`}>
         <div className={styles["forms-container"]}>
           <div className={styles["signin-signup"]}>
-            <form onSubmit={handlesubmit} className={styles["sign-in-form"]}>
+
+            {/* Primeiro formulario abaixo */}
+
+
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                // Aqui você pode verificar os dados do usuário para efetuar o login
+                // Comparando com os dados armazenados anteriormente ou usando uma API de autenticação.
+                // Certifique-se de validar os dados antes de efetuar o login.
+
+                if (
+                  username.current.value === localStorage.getItem('usernameData') &&
+                  password.current.value === localStorage.getItem('passwordData')
+                ) {
+                  // Os dados de login correspondem aos dados armazenados no localStorage
+                  // Você pode definir as informações de login no localStorage novamente, se desejar
+                  localStorage.setItem('loggedInUser', username.current.value);
+
+                  // Defina o estado para mostrar a página de feed
+                  setShowFeed(true);
+                }
+              }}
+              className={styles['sign-in-form']}
+            >
               <h2 className={styles.title}>Entrar</h2>
-              <div className={styles["input-field"]}>
+              <div className={styles['input-field']}>
                 <i className={`fas fa-user ${styles.icon}`}></i>
                 <input type="text" placeholder="Username" ref={username} />
               </div>
-              <div className={styles["input-field"]}>
+              <div className={styles['input-field']}>
                 <i className={`fas fa-lock ${styles.icon}`}></i>
                 <input type="password" placeholder="Password" ref={password} />
               </div>
-              <input type="submit" value="Entrar Conta" className={`${styles.btn} ${styles.solid}`} />
-              <p className={styles["social-text"]}>Ou entre com plataformas sociais</p>
-              <div className={styles["social-media"]}>
-                <a href="#" className={styles["social-icon"]}>
+              <input
+                type="submit"
+                value="Entrar Conta"
+                className={`${styles.btn} ${styles.solid}`}
+              />
+              <p className={styles['social-text']}>Ou entre com plataformas sociais</p>
+              <div className={styles['social-media']}>
+                <a href="#" className={styles['social-icon']}>
                   <i className={`fab fa-facebook-f ${styles.icon}`}></i>
                 </a>
-                <a href="#" className={styles["social-icon"]}>
+                <a href="#" className={styles['social-icon']}>
                   <i className={`fab fa-twitter ${styles.icon}`}></i>
                 </a>
-                <a href="#" className={styles["social-icon"]}>
+                <a href="#" className={styles['social-icon']}>
                   <i className={`fab fa-google ${styles.icon}`}></i>
                 </a>
-                <a href="#" className={styles["social-icon"]}>
+                <a href="#" className={styles['social-icon']}>
                   <i className={`fab fa-linkedin-in ${styles.icon}`}></i>
                 </a>
               </div>
             </form>
-            <form action="#" className={styles["sign-up-form"]}>
+
+
+            {/* Segundo formulario abaixo */}
+
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                // Aqui você pode usar os dados de userData para criar a conta
+                // Certifique-se de validar os dados antes de criar a conta.
+
+                // Salvando os dados no localStorage após a validação
+                localStorage.setItem('usernameData', userData.username);
+                localStorage.setItem('emailData', userData.email);
+                localStorage.setItem('passwordData', userData.password);
+
+                // Após o envio bem-sucedido e a gravação no localStorage, recarregue a página
+                window.location.reload();
+              }}
+              className={styles['sign-up-form']}
+            >
               <h2 className={styles.title}>Cadastrar</h2>
-              <div className={styles["input-field"]}>
+              <div className={styles['input-field']}>
                 <i className={`fas fa-user ${styles.icon}`}></i>
-                <input type="text" placeholder="Username" />
+                <input
+                  type="text"
+                  placeholder="Username"
+                  name="username"
+                  value={userData.username}
+                  onChange={(e) =>
+                    setUserData({ ...userData, username: e.target.value })
+                  }
+                />
               </div>
-              <div className={styles["input-field"]}>
+              <div className={styles['input-field']}>
                 <i className={`fas fa-envelope ${styles.icon}`}></i>
-                <input type="email" placeholder="Email" />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  value={userData.email}
+                  onChange={(e) =>
+                    setUserData({ ...userData, email: e.target.value })
+                  }
+                />
               </div>
-              <div className={styles["input-field"]}>
+              <div className={styles['input-field']}>
                 <i className={`fas fa-lock ${styles.icon}`}></i>
-                <input type="password" placeholder="Password" />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  value={userData.password}
+                  onChange={(e) =>
+                    setUserData({ ...userData, password: e.target.value })
+                  }
+                />
               </div>
-              <input type="submit" className={styles.btn} value="Cadastrar Conta" />
-              <p className={styles["social-text"]}>Ou entre com plataformas sociais</p>
-              <div className={styles["social-media"]}>
-                <a href="#" className={styles["social-icon"]}>
+              <input
+                type="submit"
+                className={styles.btn}
+                value="Cadastrar Conta"
+              />
+              <p className={styles['social-text']}>Ou entre com plataformas sociais</p>
+              <div className={styles['social-media']}>
+                <a href="#" className={styles['social-icon']}>
                   <i className={`fab fa-facebook-f ${styles.icon}`}></i>
                 </a>
-                <a href="#" className={styles["social-icon"]}>
+                <a href="#" className={styles['social-icon']}>
                   <i className={`fab fa-twitter ${styles.icon}`}></i>
                 </a>
-                <a href="#" className={styles["social-icon"]}>
+                <a href="#" className={styles['social-icon']}>
                   <i className={`fab fa-google ${styles.icon}`}></i>
                 </a>
-                <a href="#" className={styles["social-icon"]}>
+                <a href="#" className={styles['social-icon']}>
                   <i className={`fab fa-linkedin-in ${styles.icon}`}></i>
                 </a>
               </div>
             </form>
+
           </div>
         </div>
         <div className={styles["panels-container"]}>
