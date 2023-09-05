@@ -2,9 +2,15 @@
     --color-text: #d8d8d8;
 }
 
-body {
-    background-color: #E5E4DF;
+body, * {
+  border: 1px solid #f80000; /* Adiciona uma borda vermelha de 1 pixel de largura a todos os elementos */
 }
+
+body {
+  background-color: #E5E4DF;
+  border: 1px solid #f80000; /* Adiciona uma borda vermelha de 1 pixel de largura */
+}
+
 
 .contexto {
   padding: 3rem;
@@ -12,16 +18,31 @@ body {
   padding-bottom: 8rem; /* Espaço entre o título e o parágrafo */
 }
 
-.explica{
-  max-width: 70%;
+.explica {
+  padding: 20px; /* Espaçamento interno da div */
+  text-align: center; /* Centraliza o texto na div */
 }
 
-.contexto p {
+.explica p {
+  line-height: 1.5; /* Espaçamento entre linhas para melhor legibilidade */
+  margin: 0; /* Remove margens padrão do parágrafo */
   text-align: center;
   margin-top: 5rem;
   font-size: 26px; /* Tamanho da fonte para o parágrafo */
   line-height: 1.5; /* Espaçamento entre linhas para melhor legibilidade */
   color: #333; /* Cor do texto (pode ajustar conforme necessário) */
+}
+
+
+.tituloContexto {
+  padding: 20px; /* Espaçamento interno da div */
+  text-align: center; /* Centraliza o texto na div */
+}
+
+.tituloContexto h1 {
+  font-size: 50px; /* Tamanho da fonte para os títulos h1 */
+  margin: 0; /* Remova a margem inferior para que fiquem grudados */
+  line-height: 1; /* Ajuste o espaçamento vertical */
 }
 
 
@@ -37,6 +58,8 @@ body {
   .cardsContainer{
     flex-direction: column;
     gap: 1rem;
+    padding: 0px;
+    max-width: 130;
   }
 }
 
@@ -45,7 +68,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 25rem;
+    width: 17rem;
 }
 
 .Diagrama-Alpha{
@@ -73,7 +96,13 @@ body {
 @media only screen and (max-width: 500px){
   .tituloDiagrama{
     margin-left: 1rem;
-    font-size: 30px;
+  }
+  .tituloContexto h1{
+    margin-left: 1rem;
+    font-size: 40px;
+  }
+  .coment-container p{
+    font-size: 20px;
   }
 }
 
@@ -100,7 +129,7 @@ body {
 
 .mid-site h1{
   color: var(--color-text);
-  font-size: 52px;
+  font-size: 42px;
   text-align: center;
 }
 

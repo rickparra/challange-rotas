@@ -14,9 +14,9 @@ export default function Home() {
             <VideoComponent />
 
             <div className="contexto">
-                <div className="tituloDiagrama">
-                    <h1>Transformando São Paulo em uma </h1>
-                    <h1>Cidade Mais Segura e Inteligente</h1>
+                <div className="tituloContexto">
+                    <h1>São Paulo, a</h1>
+                    <h1>nossa SmartCity</h1>
                 </div>
                 <div className="explica">
                     <p>
