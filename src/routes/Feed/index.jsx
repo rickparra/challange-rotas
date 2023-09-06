@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from "./Feed.module.css";
 import GroupList from '../../components/GroupList';
 import ChatScreen from '../../components/ChatScreen';
@@ -8,6 +8,7 @@ function Feed() {
   const [groups, setGroups] = useState([]);
   const [newGroupName, setNewGroupName] = useState('');
   const [currentGroup, setCurrentGroup] = useState(null);
+  const [isDragBarActive, setIsDragBarActive] = useState(false);
 
   useEffect(() => {
     const savedGroups = JSON.parse(localStorage.getItem('groups')) || [];
@@ -39,14 +40,22 @@ function Feed() {
     window.location.reload();
   }
 
+  const handleDragBarClick = () => {
+    setIsDragBarActive(!isDragBarActive);
+  }
+
   return (
     <div className={styles.feedContent}>
-      <div className={styles.left}>
+      <div className={`${styles.left} ${isDragBarActive ? styles.ativo : ''}`}>
         <MapContent />
       </div>
 
+      <div className={`${styles.dragBar} ${isDragBarActive ? styles.ativo : ''}`} onClick={handleDragBarClick}>
+        <p>BARRA DO CHAT</p>
+      </div>
+
       <div className={styles.right}>
-        <div className={`${styles.feedContainer}`}>
+        <div className={`${styles.feedContainer} ${isDragBarActive ? styles.ativo : ''}`}>
           <h1 className={styles.feedTitle}>Feed</h1>
 
           {!currentGroup && (

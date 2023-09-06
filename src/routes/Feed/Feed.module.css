@@ -1,22 +1,104 @@
+/* No seu arquivo CSS */
+:root {
+  --drag-bar-height: 5%; /* Altura padrão quando não está arrastada */
+}
+
+
+/* Estilos para a seção de conteúdo do feed */
 .feedContent {
   display: flex;
-  flex-direction: row; /* Altere a direção do flexbox para linha */
-  justify-content: space-between; /* Distribua os elementos ao longo do eixo principal */
+  flex-direction: row;
+  /* Altere a direção do flexbox para linha */
+  justify-content: space-between;
+  /* Distribua os elementos ao longo do eixo principal */
 }
 
 .left {
-  flex: 1; /* Permita que o mapa expanda e ocupe o espaço disponível */
+  flex: 1;
+  /* Permita que o mapa expanda e ocupe o espaço disponível */
 }
 
 .right {
-  flex: 1; /* Permita que o chat expanda e ocupe o espaço disponível */
-  margin-left: 20px; /* Adicione uma margem à esquerda para separar os elementos */
+  flex: 1;
+  /* Permita que o chat expanda e ocupe o espaço disponível */
 }
 
+/* Estilos para a div .dragBar */
+/* Estilos para a div .dragBar */
+.dragBar {
+  display: none;
+  /* Esconde a div por padrão */
+  width: 100%;
+  /* Largura total */
+  background-color: #005ec2;
+  margin: 0;
+  padding: 10px 0;
+  /* Espaçamento interno ajustado para melhor aparência */
+  cursor: pointer;
+  text-align: center;
+  color: #fff; /* Cor do texto */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilize o parágrafo dentro de .dragBar, se necessário */
+.dragBar p {
+  font-size: 16px; /* Tamanho da fonte para o parágrafo */
+  margin: 5px 0; /* Margem superior e inferior para o parágrafo */
+  /* Adicione mais estilos conforme necessário para o parágrafo */
+}
+
+
+
+/* Estilos para telas menores que 1000px */
+@media screen and (max-width: 1000px) {
+
+  /* Mostra a div .dragBar quando a tela for menor que 1000px */
+  .dragBar {
+    display: block;
+    min-height: 5%;
+
+  }
+
+  /* Oculta a .feedContainer quando a tela for menor que 1000px */
+  .feedContainer {
+    display: none;
+  }
+
+  .feedContent {
+    flex-direction: column;
+  }
+
+  .left {
+    min-height: 95%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  /* Mostra a div .dragBar quando a tela for menor que 1000px */
+  .dragBar {
+    display: block;
+    min-height: 5%;
+  }
+
+  /* Oculta a .feedContainer quando a tela for menor que 1000px */
+  .feedContainer.ativo {
+    display: block;
+    margin-left: 0px;
+  }
+
+  .left.ativo {
+    display: none;
+  }
+}
+
+/* Estilos para a .feedContainer (mova esses estilos para o final do seu arquivo CSS) */
 .feedContainer {
   max-width: 400px;
   margin: 0 0 0 auto;
-  min-height: 50VW;
+  min-height: 100vh;
+  /* Garante que a seção ocupe toda a altura da tela */
   padding: 20px;
   border: 1px solid #e4e4e4;
   border-radius: 10px;
@@ -24,12 +106,13 @@
   background-color: #f2f2f2;
 }
 
-
+/* Estilos para o título do feed */
 .feedTitle {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
+/* Estilos para o formulário de grupo */
 .groupForm {
   display: flex;
   align-items: center;
@@ -37,6 +120,7 @@
   margin-bottom: 20px;
 }
 
+/* Estilos para o input do grupo */
 .groupForm input {
   flex: 1;
   padding: 10px;
@@ -44,6 +128,7 @@
   border-radius: 5px;
 }
 
+/* Estilos para o botão do grupo */
 .groupForm button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -53,15 +138,18 @@
   cursor: pointer;
 }
 
+/* Estilos para a lista de grupos */
 .groupList {
   margin-bottom: 20px;
 }
 
+/* Estilos para a lista de grupos (ul) */
 .groupList ul {
   list-style: none;
   padding: 0;
 }
 
+/* Estilos para cada item da lista de grupos (li) */
 .groupList li {
   padding: 10px;
   border-bottom: 1px solid #e4e4e4;
@@ -71,14 +159,17 @@
   align-items: center;
 }
 
+/* Estilos para o último item da lista de grupos */
 .groupList li:last-child {
   border-bottom: none;
 }
 
+/* Estilos de hover para os itens da lista de grupos */
 .groupList li:hover {
   background-color: #e6f7ff;
 }
 
+/* Estilos para o grupo atualmente selecionado */
 .currentGroup {
   border: 1px solid #e4e4e4;
   padding: 20px;
@@ -87,21 +178,25 @@
   margin-top: 10px;
 }
 
+/* Estilos para o título do grupo atualmente selecionado */
 .currentGroup h2 {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
+/* Estilos para os subtítulos do grupo atualmente selecionado */
 .currentGroup h3 {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
+/* Estilos para a lista dentro do grupo atualmente selecionado */
 .currentGroup ul {
   list-style: none;
   padding: 0;
 }
 
+/* Estilos para os itens da lista dentro do grupo atualmente selecionado */
 .currentGroup li {
   padding: 5px 0;
 }
