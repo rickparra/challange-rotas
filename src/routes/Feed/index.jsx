@@ -47,8 +47,8 @@ function Feed() {
   return (
     <div className={styles.feedContent}>
       <div className={`${styles.left} ${isDragBarActive ? styles.ativo : ''}`}>
-        <MapContent />
-      </div>
+      <MapContent />
+    </div>
 
       <div className={`${styles.dragBar} ${isDragBarActive ? styles.ativo : ''}`} onClick={handleDragBarClick}>
         <p>BARRA DO CHAT</p>

@@ -1,8 +1,10 @@
-export default function MapContent(){
 
-    return(
-        <>
-        <h1>o mapa devera aparecer aqui</h1>
-        </>
-    )
+import styles from './MapContent.css'
+
+export default function MapContent() {
+  return (
+    <>
+      <img src="paulista-mapa.png" alt="Mapa Paulista" />
+    </>
+  );
 }
