@@ -27,33 +27,6 @@ export default function LoginLogout() {
   const password = useRef();
   const [showFeed, setShowFeed] = useState(false);
 
-  // Função para verificar as credenciais do usuário
-  const checkCredentials = () => {
-    const inputUsername = username.current.value.trim();
-    const inputPassword = password.current.value.trim();
-
-    // Recupere os usuários armazenados no localStorage
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-
-    // Verifique se as credenciais correspondem a algum usuário
-    const user = users.find(
-      (user) =>
-        user.username === inputUsername && user.password === inputPassword
-    );
-
-    if (user) {
-      // As credenciais correspondem a um usuário existente
-      // Você pode definir o usuário logado, se desejar
-      localStorage.setItem("loggedInUser", user.username);
-
-      // Defina o estado para mostrar a página de feed
-      setShowFeed(true);
-    } else {
-      // Credenciais inválidas
-      alert("Credenciais inválidas. Por favor, verifique seus dados.");
-    }
-  };
-
   useEffect(() => {
     // Verifique se o usuário está autenticado no localStorage
     const loggedInUser = localStorage.getItem("loggedInUser");
@@ -68,31 +41,63 @@ export default function LoginLogout() {
   };
 
   // Função para criar uma conta
-  const createUserAccount = () => {
-    // Recupere os usuários existentes ou crie um novo array vazio
-    const users = JSON.parse(localStorage.getItem("users")) || [];
+const createUserAccount = async () => {
+  const inputUsername = userData.username.trim();
+  const inputPassword = userData.password.trim();
 
-    // Verifique se o nome de usuário já existe
-    const usernameExists = users.some(
-      (user) => user.username === userData.username
-    );
+  // Recupere os usuários existentes ou crie um novo array vazio
+  const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    if (usernameExists) {
-      // Nome de usuário já existe, exiba um alerta
-      alert(
-        "Nome de usuário já existe. Por favor, escolha outro nome de usuário."
-      );
-    } else {
-      // Adicione o novo usuário ao array de usuários
-      users.push(userData);
+  // Verifique se o nome de usuário já existe
+  const usernameExists = users.some(
+    (user) => user.username === inputUsername
+  );
 
-      // Salve o array atualizado no localStorage
-      localStorage.setItem("users", JSON.stringify(users));
+  if (usernameExists) {
+    // Nome de usuário já existe, exiba um alerta
+    alert("Nome de usuário já existe. Por favor, escolha outro nome de usuário.");
+  } else {
+    // Adicione o novo usuário ao array de usuários
+    users.push({ username: inputUsername, password: inputPassword });
 
-      // Após o envio bem-sucedido e a gravação no localStorage, recarregue a página
-      handleClick();
-    }
-  };
+    // Agora, antes de salvar no localStorage, vamos esperar um pouco para garantir
+    // que os dados sejam atualizados corretamente.
+    await new Promise((resolve) => setTimeout(resolve, 100));
+
+    // Salve o array atualizado no localStorage
+    localStorage.setItem("users", JSON.stringify(users));
+
+    // Após o envio bem-sucedido e a gravação no localStorage, recarregue a página
+    handleClick();
+  }
+};
+
+// Função para verificar as credenciais do usuário
+const checkCredentials = () => {
+  const inputUsername = username.current.value.trim();
+  const inputPassword = password.current.value.trim();
+
+  // Recupere os usuários armazenados no localStorage
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+
+  // Verifique se as credenciais correspondem a algum usuário
+  const user = users.find(
+    (user) => user.username === inputUsername && user.password === inputPassword
+  );
+
+  if (user) {
+    // As credenciais correspondem a um usuário existente
+    // Você pode definir o usuário logado, se desejar
+    localStorage.setItem("loggedInUser", user.username);
+
+    // Defina o estado para mostrar a página de feed
+    setShowFeed(true);
+  } else {
+    // Credenciais inválidas
+    alert("Credenciais inválidas. Por favor, verifique seus dados.");
+  }
+};
+
 
   return showFeed ? (
     <Feed />
@@ -157,23 +162,6 @@ export default function LoginLogout() {
 
               // Recupere os usuários existentes ou crie um novo array vazio
               const users = JSON.parse(localStorage.getItem("users")) || [];
-
-              // Verifique se o nome de usuário já existe
-              const usernameExists = users.some(
-                (user) => user.username === userData.username
-              );
-
-              if (usernameExists) {
-                alert(
-                  "Nome de usuário já existe. Por favor, escolha outro nome de usuário."
-                );
-              } else {
-                // Adicione o novo usuário ao array de usuários
-                users.push(userData);
-
-                // Salve o array atualizado no localStorage
-                localStorage.setItem("users", JSON.stringify(users));
-              }
             }}
             className={styles["sign-up-form"]}
           >
