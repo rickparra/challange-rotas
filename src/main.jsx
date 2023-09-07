@@ -8,7 +8,6 @@ import Home from './routes/Home'
 import Error from './routes/Error'
 import About from './routes/About'
 import LoginLogout from './routes/LoginLogout'
-import Feed from './routes/Feed'
 
 const router = createBrowserRouter([
   {
@@ -27,10 +26,6 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <LoginLogout />
-      },
-      {
-        path: "/feed",
-        element: <Feed />
       },
     ]
   }

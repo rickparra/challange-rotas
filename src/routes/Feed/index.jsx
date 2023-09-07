@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styles from "./Feed.module.css";
 import GroupList from '../../components/GroupList';
 import ChatScreen from '../../components/ChatScreen';
