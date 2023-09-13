@@ -3,6 +3,7 @@ import VideoComponent from '../../components/VideoComponent/index';
 import Card from '../../components/Card';
 import Diagrama from '../../components/PlataformDiagram';
 import Products from '../../components/Products';
+import CtaSection from '../../components/CTASection';
 
 export default function Home() {
 
@@ -33,22 +34,22 @@ export default function Home() {
 
                 <Card
                     title="Botão de Pânico"
-                    imageUrl="https://images.unsplash.com/photo-1525935944571-4e99237764c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
-                    body="testetestetestetestetestetestetes
-                wfef4tt t45g45gijo"
+                    imageUrl="botao_panico.png"
+                    body="O Botão de Pânico é uma funcionalidade essencial nos nossos totens. Ele permite que os usuários solicitem ajuda imediata em situações de emergência, como acidentes ou situações de perigo. Quando acionado, o Botão de Pânico envia um alerta para nossa equipe de segurança, que pode responder rapidamente para garantir a segurança do usuário."
                 />
                 <Card
                     title="Mapa de Riscos"
-                    imageUrl="https://images.unsplash.com/photo-1525935944571-4e99237764c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
-                    body="testetestetestetestetestetestetes
-                wfef4tt t45g45gijo"
+                    imageUrl="mapa_risco.png"
+                    body="Nosso aplicativo oferece um Mapa de Riscos abrangente, que permite aos usuários visualizarem áreas de risco em tempo real. Essas informações são cruciais para a tomada de decisões informadas, seja para evitar áreas de perigo ou para planejar rotas mais seguras. O Mapa de Riscos é uma ferramenta poderosa para garantir a segurança dos nossos usuários."
                 />
                 <Card
-                    title=" Alertas em Tempo Real"
-                    imageUrl="https://images.unsplash.com/photo-1525935944571-4e99237764c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
-                    body="testetestetestetestetestetestetes
-                 wfef4tt t45g45gijo"
+                    title="Em Tempo Real"
+                    imageUrl="https://blog.cloudflare.com/content/images/2022/01/unnamed-13.png"
+                    body="Nossos Alertas em Tempo Real são uma parte fundamental do nosso sistema de segurança. Eles permitem que os usuários façam denúncias em tempo real sobre incidentes suspeitos ou perigos iminentes. Essas denúncias são processadas instantaneamente, permitindo uma resposta rápida por parte das autoridades ou da nossa equipe de segurança."
                 />
+
+
+
 
             </div>
 
@@ -152,6 +153,11 @@ export default function Home() {
                 </div>
 
             </div>
+
+            <CtaSection
+                title="Venha fazer parte do presente"
+                text="Crie sua conta e participe da nossa comunidade."
+            />
 
         </div>
 

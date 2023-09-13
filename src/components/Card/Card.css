@@ -1,7 +1,7 @@
 .card-container{
     background-color: rgb(255, 255, 255);
     width: 20rem;
-    height: 30rem;
+    height: 44rem;
     overflow: hidden;
     transition: 0.6s;
     animation: ease-in;
