@@ -161,7 +161,6 @@ const checkCredentials = () => {
               createUserAccount();
 
               // Recupere os usuários existentes ou crie um novo array vazio
-              const users = JSON.parse(localStorage.getItem("users")) || [];
             }}
             className={styles["sign-up-form"]}
           >
