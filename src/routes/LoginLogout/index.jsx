@@ -37,7 +37,7 @@ export default function LoginLogout() {
   }, []);
 
   const handleClick = () => {
-    window.location.href = window.location.href;
+    window.location.reload();
   };
 
   // Função para criar uma conta
