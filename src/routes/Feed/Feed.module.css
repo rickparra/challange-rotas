@@ -2,6 +2,10 @@
 :root {
   --drag-bar-height: 5%; /* Altura padrão quando não está arrastada */
 }
+/* 
+* {
+  border: 1px solid red; /* Define uma borda vermelha de 1px em todos os elementos */
+
 
 /* Estilos para a seção de conteúdo do feed */
 .feedContent {
