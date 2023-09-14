@@ -35,17 +35,17 @@ export default function Home() {
                 <Card
                     title="Botão de Pânico"
                     imageUrl="botao_panico.png"
-                    body="O Botão de Pânico é uma funcionalidade essencial nos nossos totens. Ele permite que os usuários solicitem ajuda imediata em situações de emergência, como acidentes ou situações de perigo. Quando acionado, o Botão de Pânico envia um alerta para nossa equipe de segurança, que pode responder rapidamente para garantir a segurança do usuário."
+                    body="O Botão de Pânico é uma funcionalidade essencial nos nossos totens. Ele permite que os usuários solicitem ajuda imediata em situações de emergência."
                 />
                 <Card
                     title="Mapa de Riscos"
                     imageUrl="mapa_risco.png"
-                    body="Nosso aplicativo oferece um Mapa de Riscos abrangente, que permite aos usuários visualizarem áreas de risco em tempo real. Essas informações são cruciais para a tomada de decisões informadas, seja para evitar áreas de perigo ou para planejar rotas mais seguras. O Mapa de Riscos é uma ferramenta poderosa para garantir a segurança dos nossos usuários."
+                    body="Nosso aplicativo oferece um Mapa de Riscos abrangente, que permite aos usuários visualizarem áreas de risco em tempo real."
                 />
                 <Card
                     title="Em Tempo Real"
                     imageUrl="https://blog.cloudflare.com/content/images/2022/01/unnamed-13.png"
-                    body="Nossos Alertas em Tempo Real são uma parte fundamental do nosso sistema de segurança. Eles permitem que os usuários façam denúncias em tempo real sobre incidentes suspeitos ou perigos iminentes. Essas denúncias são processadas instantaneamente, permitindo uma resposta rápida por parte das autoridades ou da nossa equipe de segurança."
+                    body="Nossos Alertas em Tempo Real são uma parte fundamental do nosso sistema de segurança. Eles permitem que os usuários façam denúncias em tempo real sobre incidentes suspeitos ou perigos iminentes."
                 />
 
 
