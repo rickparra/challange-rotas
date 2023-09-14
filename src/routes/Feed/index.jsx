@@ -1,90 +1,80 @@
-import { useState, useEffect } from 'react';
-import styles from "./Feed.module.css";
-import GroupList from '../../components/GroupList';
-import ChatScreen from '../../components/ChatScreen';
-import MapContent from '../../components/MapComponent';
+import{ useState } from 'react';
+import styles from './Feed.module.css';
+import MapContent from '../../components/MapComponent'
 
-function Feed() {
-  const [groups, setGroups] = useState([]);
-  const [newGroupName, setNewGroupName] = useState('');
-  const [currentGroup, setCurrentGroup] = useState(null);
+export default function Feed() {
+  const [denuncias, setDenuncias] = useState([]);
+  const [denunciaSelecionada, setDenunciaSelecionada] = useState(null);
   const [isDragBarActive, setIsDragBarActive] = useState(false);
-
-  useEffect(() => {
-    const savedGroups = JSON.parse(localStorage.getItem('groups')) || [];
-    setGroups(savedGroups);
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('groups', JSON.stringify(groups));
-  }, [groups]);
-
-  function createGroup() {
-    if (newGroupName.trim() !== '') {
-      const newGroup = { name: newGroupName, members: [] };
-      setGroups(prevGroups => [...prevGroups, newGroup]);
-      setNewGroupName('');
-    }
-  }
-
-  function handleGroupClick(groupIndex) {
-    setCurrentGroup(groups[groupIndex]);
-  }
-
-  function handleBackToGroups() {
-    setCurrentGroup(null);
-  }
+  const [titulo, setTitulo] = useState('');
+  const [descricao, setDescricao] = useState('');
 
   const handleClick = () => {
     localStorage.clear();
     window.location.reload();
-  }
+  };
 
   const handleDragBarClick = () => {
     setIsDragBarActive(!isDragBarActive);
-  }
+  };
+
+  const handleCreateDenuncia = (novaDenuncia) => {
+    setDenuncias([...denuncias, novaDenuncia]);
+    setTitulo('');
+    setDescricao('');
+  };
 
   return (
     <div className={styles.feedContent}>
       <div className={`${styles.left} ${isDragBarActive ? styles.ativo : ''}`}>
-      <MapContent />
-    </div>
-
-      <div className={`${styles.dragBar} ${isDragBarActive ? styles.ativo : ''}`} onClick={handleDragBarClick}>
+        <MapContent/>
+      </div>
+  
+      <div
+        className={`${styles.dragBar} ${isDragBarActive ? styles.ativo : ''}`}
+        onClick={handleDragBarClick}
+      >
         <p>BARRA DO CHAT</p>
       </div>
-
+  
       <div className={styles.right}>
         <div className={`${styles.feedContainer} ${isDragBarActive ? styles.ativo : ''}`}>
           <h1 className={styles.feedTitle}>Feed</h1>
-
-          {!currentGroup && (
+          <button onClick={handleClick}>sair da conta</button>
+  
+          {/* Formulário para criar denúncias */}
+          <h3>Criar Denúncia</h3>
+          <form onSubmit={(e) => e.preventDefault()}>
             <div>
-              <button onClick={handleClick}>sair da conta</button>
-
-              <div className={styles.groupForm}>
-                <input
-                  type="text"
-                  placeholder="Nome do grupo"
-                  value={newGroupName}
-                  onChange={e => setNewGroupName(e.target.value)}
-                />
-                <button onClick={createGroup}>Criar Grupo</button>
-              </div>
-              <GroupList groups={groups} handleGroupClick={handleGroupClick} />
+              <label>Título:</label>
+              <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
             </div>
-          )}
-
-          {currentGroup && (
-            <ChatScreen
-              currentGroup={currentGroup}
-              handleBackToGroups={handleBackToGroups}
-            />
-          )}
+            <div>
+              <label>Descrição:</label>
+              <textarea value={descricao} onChange={(e) => setDescricao(e.target.value)} />
+            </div>
+            <button onClick={() => handleCreateDenuncia({ titulo, descricao })}>
+              Enviar Denúncia
+            </button>
+          </form>
+  
+          {/* Lista de denúncias */}
+          <div className={styles.denunciasList}>
+            {denuncias.map((denuncia, index) => (
+              <div key={index} className={styles.denunciaItem}>
+                <h3 onClick={() => setDenunciaSelecionada(denuncia)}>{denuncia.titulo}</h3>
+                {denunciaSelecionada === denuncia && (
+                  <div className={styles.denunciaDetalhes}>
+                    <p>{denuncia.descricao}</p>
+                    {/* Adicione mais informações da denúncia aqui */}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
+  
 }
-
-export default Feed;
