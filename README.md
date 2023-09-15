@@ -26,14 +26,14 @@ Com base nessas classificações, a plataforma oferece aos usuários a capacidad
 
 Este projeto é desenvolvido por estudantes da FIAP da 1ESPV:
 
-- Henrique Parra Benitez (RM551973)
+- Henrique Parra Benitez (RM551973) 1ESPV
   - GitHub: [rickparra](https://github.com/rickparra)
 
-- Roberto Oliveira Azzalin Navas (RM551460)
+- Roberto Oliveira Azzalin Navas (RM551460) 1ESPV
   - GitHub: [Robertooan07](https://github.com/Robertooan07)
 
-- Tony Willian da Silva Segalin (RM550667)
+- Tony Willian da Silva Segalin (RM550667) 1ESPV
   - GitHub: [TonyWillianFIAP](https://github.com/TonyWillianFIAP)
 
-- Julia Amorim Bezerra (RM99609)
+- Julia Amorim Bezerra (RM99609) 1ESPV
   - GitHub: [juamori](https://github.com/juamori)
