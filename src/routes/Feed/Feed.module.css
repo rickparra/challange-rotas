@@ -116,7 +116,7 @@
 /* Estilos para o título do feed */
 .feedTitle {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 /* Estilos para o formulário de grupo */
@@ -124,7 +124,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 /* Estilos para o input do grupo */
