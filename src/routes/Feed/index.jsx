@@ -7,8 +7,9 @@ export default function Feed() {
   const [denunciaSelecionada, setDenunciaSelecionada] = useState(null);
   const [isDragBarActive, setIsDragBarActive] = useState(false);
   const [titulo, setTitulo] = useState('');
-  const [descricao, setDescricao] = useState('');
   const [reloadKey, setReloadKey] = useState(0);
+  const [descricao, setDescricao] = useState('');
+
 
 
   const handleClick = () => {

@@ -112,6 +112,13 @@
   background-color: #f2f2f2;
 }
 
+/* Estilos para o formulário de grupo */
+.groupForm {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+} 
 
 /* Estilos para o título do feed */
 .feedTitle {
@@ -119,13 +126,7 @@
   margin-bottom: 20px;
 }
 
-/* Estilos para o formulário de grupo */
-.groupForm {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
+
 
 /* Estilos para o input do grupo */
 .groupForm input {
