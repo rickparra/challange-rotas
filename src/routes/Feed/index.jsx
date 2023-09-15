@@ -41,7 +41,7 @@ export default function Feed() {
       </div>
   
       <div className={styles.right}>
-        <div className={`{styles.feedContainer} ${isDragBarActive ? styles.ativo : ''}`}>
+        <div className={`${styles.feedContainer} ${isDragBarActive ? styles.ativo : ''}`}>
           <h1 className={styles.feedTitle}>Feed</h1>
           <button onClick={handleClick}>sair da conta</button>
   
