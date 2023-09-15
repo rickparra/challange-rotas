@@ -55,7 +55,7 @@
 
 /* Estilos para telas menores que 1000px */
 @media screen and (max-width: 1000px) {
-
+  
   /* Mostra a div .dragBar quando a tela for menor que 1000px */
   .dragBar {
     display: block;
@@ -112,13 +112,6 @@
   background-color: #f2f2f2;
 }
 
-/* Estilos para o formulário de grupo */
-.groupForm {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-} 
 
 /* Estilos para o título do feed */
 .feedTitle {
@@ -126,7 +119,13 @@
   margin-bottom: 20px;
 }
 
-
+/* Estilos para o formulário de grupo */
+.groupForm {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
 /* Estilos para o input do grupo */
 .groupForm input {
@@ -182,8 +181,9 @@
   border: 1px solid #e4e4e4;
   padding: 20px;
   border-radius: 10px;
-  background-color: white;
   margin-top: 10px;
+  background-color: white;
+  
 }
 
 /* Estilos para o título do grupo atualmente selecionado */
