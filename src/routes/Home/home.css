@@ -38,12 +38,7 @@ body {
 }
 
 
-.tituloContexto {
-  padding: 20px;
-  /* Espaçamento interno da div */
-  text-align: center;
-  /* Centraliza o texto na div */
-}
+
 
 .tituloContexto h1 {
   font-size: 60px;
@@ -54,6 +49,12 @@ body {
   /* Ajuste o espaçamento vertical */
 }
 
+.tituloContexto {
+  padding: 20px;
+  /* Espaçamento interno da div */
+  text-align: center;
+  /* Centraliza o texto na div */
+}
 
 .cardsContainer {
   display: flex;

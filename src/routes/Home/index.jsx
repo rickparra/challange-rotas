@@ -21,7 +21,10 @@ export default function Home() {
                 </div>
                 <div className="explica">
                     <p>
-                        
+                        No coração da maior metrópole do Brasil, o UrbanShield está liderando uma revolução na segurança urbana.
+                        Com a visão de utilizar a tecnologia para enfrentar os desafios do ambiente urbano, nossos totens digitais estão
+                        estrategicamente posicionados em toda a cidade, coletando dados valiosos que são essenciais para tornar São Paulo
+                        um lugar mais seguro para todos.
                     </p>
                 </div>
             </div>
@@ -46,10 +49,7 @@ export default function Home() {
                 />
 
 
-No coração da maior metrópole do Brasil, o UrbanShield está liderando uma revolução na segurança urbana.
-                        Com a visão de utilizar a tecnologia para enfrentar os desafios do ambiente urbano, nossos totens digitais estão
-                        estrategicamente posicionados em toda a cidade, coletando dados valiosos que são essenciais para tornar São Paulo
-                        um lugar mais seguro para todos.
+
 
             </div>
 
