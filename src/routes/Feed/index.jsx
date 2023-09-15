@@ -8,10 +8,12 @@ export default function Feed() {
   const [isDragBarActive, setIsDragBarActive] = useState(false);
   const [titulo, setTitulo] = useState('');
   const [descricao, setDescricao] = useState('');
+  const [reloadKey, setReloadKey] = useState(0);
+
 
   const handleClick = () => {
     localStorage.clear();
-    window.location.reload();
+    setReloadKey(reloadKey + 1);
   };
 
   const handleDragBarClick = () => {
