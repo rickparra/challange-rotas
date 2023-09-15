@@ -99,9 +99,8 @@ export default function Home() {
                     />
                     <Products
                         products={[
-                            
-                            { id: 2, name: 'Comunidades' },
                             { id: 1, name: 'App GPS' },
+                            { id: 2, name: 'Comunidades' },
                             { id: 3, name: 'Botão de pânico' },
                         ]}
                     />
