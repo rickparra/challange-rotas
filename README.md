@@ -24,7 +24,7 @@ Com base nessas classificações, a plataforma oferece aos usuários a capacidad
 
 ## Participantes
 
-Este projeto é desenvolvido por estudantes da FIAP:
+Este projeto é desenvolvido por estudantes da FIAP da 1ESPV:
 
 - Henrique Parra Benitez (RM551973)
   - GitHub: [rickparra](https://github.com/rickparra)
