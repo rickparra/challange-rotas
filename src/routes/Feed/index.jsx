@@ -1,20 +1,18 @@
-import { useState } from 'react';
+import{ useState } from 'react';
 import styles from './Feed.module.css';
-import MapContent from '../../components/MapComponent';
+import MapContent from '../../components/MapComponent'
 
 export default function Feed() {
   const [denuncias, setDenuncias] = useState([]);
   const [denunciaSelecionada, setDenunciaSelecionada] = useState(null);
   const [isDragBarActive, setIsDragBarActive] = useState(false);
   const [titulo, setTitulo] = useState('');
-  const [updateKey, setUpdateKey] = useState(0); // Estado para forçar a atualização
   const [descricao, setDescricao] = useState('');
 
   const handleClick = () => {
     localStorage.clear();
-    // Alternar a chave de atualização para forçar a atualização do componente
-    setUpdateKey(prevKey => prevKey + 1);
-  };
+    window.location.reload();
+  }
 
   const handleDragBarClick = () => {
     setIsDragBarActive(!isDragBarActive);
@@ -27,23 +25,23 @@ export default function Feed() {
   };
 
   return (
-    <div key={updateKey} className={styles.feedContent}> {/* Chave de atualização aqui */}
+    <div className={styles.feedContent}>
       <div className={`${styles.left} ${isDragBarActive ? styles.ativo : ''}`}>
-        <MapContent />
+        <MapContent/>
       </div>
-
+  
       <div
         className={`${styles.dragBar} ${isDragBarActive ? styles.ativo : ''}`}
         onClick={handleDragBarClick}
       >
         <p>BARRA DO CHAT</p>
       </div>
-
+  
       <div className={styles.right}>
         <div className={`${styles.feedContainer} ${isDragBarActive ? styles.ativo : ''}`}>
           <h1 className={styles.feedTitle}>Feed</h1>
-          <button onClick={handleClick}>Sair da Conta</button>
-
+          <button onClick={handleClick}>sair da conta</button>
+  
           {/* Formulário para criar denúncias */}
           <h3>Criar Denúncia</h3>
           <form onSubmit={(e) => e.preventDefault()}>
@@ -59,7 +57,7 @@ export default function Feed() {
               Enviar Denúncia
             </button>
           </form>
-
+  
           {/* Lista de denúncias */}
           <div className={styles.denunciasList}>
             {denuncias.map((denuncia, index) => (
@@ -78,4 +76,5 @@ export default function Feed() {
       </div>
     </div>
   );
+  
 }
