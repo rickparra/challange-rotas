@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from "./Feed.module.css";
 import GroupList from '../../components/GroupList';
 import ChatScreen from '../../components/ChatScreen';
@@ -9,6 +10,8 @@ function Feed() {
   const [newGroupName, setNewGroupName] = useState('');
   const [currentGroup, setCurrentGroup] = useState(null);
   const [isDragBarActive, setIsDragBarActive] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const savedGroups = JSON.parse(localStorage.getItem('groups')) || [];
@@ -35,6 +38,7 @@ function Feed() {
     setCurrentGroup(null);
   }
 
+  // Função para recarregar a página
   const handleClick = () => {
     localStorage.clear();
     window.location.reload();
@@ -47,8 +51,8 @@ function Feed() {
   return (
     <div className={styles.feedContent}>
       <div className={`${styles.left} ${isDragBarActive ? styles.ativo : ''}`}>
-      <MapContent />
-    </div>
+        <MapContent />
+      </div>
 
       <div className={`${styles.dragBar} ${isDragBarActive ? styles.ativo : ''}`} onClick={handleDragBarClick}>
         <p>BARRA DO CHAT</p>
