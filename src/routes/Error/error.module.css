@@ -1,0 +1,78 @@
+.conteudoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.texto404 {
+  font-size: 160px;
+  font-weight: bold;
+  color: #333;
+}
+
+.titulo {
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+.paragrafo {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #777; 
+}
+
+.botaoContainer {
+  margin-top: 30px;
+  width: 200px;
+}
+
+.imagemCachorro {
+  width: 400px;
+  margin-top: 50px;
+}
+
+.espacoEmBranco {
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+
+  .conteudoContainer {
+    margin-top: 20px;
+  }
+  
+  .texto404 {
+    font-size: 96px;
+  }
+
+  .titulo {
+    font-size: 24px;
+  }
+
+  .paragrafo {
+    font-size: 16px;
+  }
+
+  .imagemCachorro {
+    width: 300px;
+  }
+
+  .espacoEmBranco {
+    height: 50px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .texto404 {
+    font-size: 64px;
+  }
+  
+  .imagemCachorro {
+    width: 200px;
+  }
+  
+}

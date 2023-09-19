@@ -2,6 +2,10 @@
 :root {
   --drag-bar-height: 5%; /* Altura padrão quando não está arrastada */
 }
+/* 
+* {
+  border: 1px solid red; /* Define uma borda vermelha de 1px em todos os elementos */
+
 
 /* Estilos para a seção de conteúdo do feed */
 .feedContent {
@@ -51,7 +55,7 @@
 
 /* Estilos para telas menores que 1000px */
 @media screen and (max-width: 1000px) {
-
+  
   /* Mostra a div .dragBar quando a tela for menor que 1000px */
   .dragBar {
     display: block;
@@ -177,8 +181,9 @@
   border: 1px solid #e4e4e4;
   padding: 20px;
   border-radius: 10px;
-  background-color: white;
   margin-top: 10px;
+  background-color: white;
+  
 }
 
 /* Estilos para o título do grupo atualmente selecionado */

@@ -56,7 +56,7 @@ export default function Menu() {
             <MenuLink to="/about" onClick={closeMenu}>Sobre Nós</MenuLink>
           </li>
           <li>
-            <MenuLink to="/login" onClick={closeMenu}>Login</MenuLink>
+            <MenuLink to="/login" onClick={closeMenu}>Mapa</MenuLink>
           </li>
         </ul>
       </nav>
