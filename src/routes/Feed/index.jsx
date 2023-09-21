@@ -1,6 +1,6 @@
 import{ useState } from 'react';
 import styles from './Feed.module.css';
-import MapContent from '../../components/MapComponent'
+import MapContainer_ from '../../components/MapContent_';
 
 export default function Feed() {
   const [denuncias, setDenuncias] = useState([]);
@@ -27,7 +27,7 @@ export default function Feed() {
   return (
     <div className={styles.feedContent}>
       <div className={`${styles.left} ${isDragBarActive ? styles.ativo : ''}`}>
-        <MapContent/>
+        <MapContainer_/>
       </div>
   
       <div
