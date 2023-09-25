@@ -1,4 +1,5 @@
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import { GoogleMap, LoadScript, Marker, InfoWindow } from "@react-google-maps/api";
+import { useState } from "react";
 
 export default function MapContent_({ denuncias }) {
   const mapContainerStyle = {
@@ -11,6 +12,8 @@ export default function MapContent_({ denuncias }) {
     lng: -46.6525015112,
   };
 
+  const [selectedDenuncia, setSelectedDenuncia] = useState(null);
+
   return (
     <LoadScript googleMapsApiKey="AIzaSyDPQAq8xtySd-OEqbD5VPzRru08juMEwdo">
       <GoogleMap
@@ -22,8 +25,28 @@ export default function MapContent_({ denuncias }) {
           <Marker
             key={index}
             position={{ lat: denuncia.latitude, lng: denuncia.longitude }}
+            onClick={() => {
+              setSelectedDenuncia(denuncia);
+            }}
           />
         ))}
+
+        {selectedDenuncia && (
+          <InfoWindow
+            position={{
+              lat: selectedDenuncia.latitude,
+              lng: selectedDenuncia.longitude,
+            }}
+            onCloseClick={() => {
+              setSelectedDenuncia(null);
+            }}
+          >
+            <div>
+              <h2>{selectedDenuncia.titulo}</h2>
+              <p>{selectedDenuncia.descricao}</p>
+            </div>
+          </InfoWindow>
+        )}
       </GoogleMap>
     </LoadScript>
   );

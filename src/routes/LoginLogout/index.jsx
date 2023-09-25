@@ -67,8 +67,10 @@ const createUserAccount = async () => {
     // Salve o array atualizado no localStorage
     localStorage.setItem("users", JSON.stringify(users));
 
+    window.alert('Conta criada com sucesso')
+
     // Após o envio bem-sucedido e a gravação no localStorage, recarregue a página
-    handleClick();
+    handleSignInClick();
   }
 };
 

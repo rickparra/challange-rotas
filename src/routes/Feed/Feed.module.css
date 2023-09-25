@@ -33,7 +33,7 @@
   /* Esconde a div por padrão */
   width: 100%;
   /* Largura total */
-  background-color: #005ec2;
+  background-color: #363636;
   margin: 0;
   padding: 0;
   /* Espaçamento interno ajustado para melhor aparência */
@@ -207,4 +207,24 @@
 /* Estilos para os itens da lista dentro do grupo atualmente selecionado */
 .currentGroup li {
   padding: 5px 0;
+}
+
+.feedTitle {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sairButton {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.sairButton:hover {
+  background-color: #e60000;
 }

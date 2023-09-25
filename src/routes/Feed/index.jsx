@@ -6,14 +6,17 @@ import DenunciaForm from '../../components/DenunciaForm';
 export default function Feed() {
   const [isDragBarActive, setIsDragBarActive] = useState(false);
   const [denuncias, setDenuncias] = useState([]); // Estado para armazenar as denúncias
+  const [dragBarText, setDragBarText] = useState('Denuncias'); // Estado para o texto do dragBar
+
 
   const handleClick = () => {
     localStorage.clear();
-    window.location.reload();
   };
 
   const handleDragBarClick = () => {
     setIsDragBarActive(!isDragBarActive);
+    // Atualize o texto com base no estado do dragBar
+    setDragBarText(isDragBarActive ? 'Denúncias' : 'Mapa');
   };
 
   // Função para adicionar uma nova denúncia ao estado
@@ -31,13 +34,13 @@ export default function Feed() {
         className={`${styles.dragBar} ${isDragBarActive ? styles.ativo : ''}`}
         onClick={handleDragBarClick}
       >
-        <p>BARRA DO CHAT</p>
+        <p>{dragBarText}</p>
       </div>
 
       <div className={styles.right}>
         <div className={`${styles.feedContainer} ${isDragBarActive ? styles.ativo : ''}`}>
           <h1 className={styles.feedTitle}>Feed</h1>
-          <button onClick={handleClick}>sair da conta</button>
+          <button onClick={handleClick} className={styles.sairButton}>sair da conta</button>
 
           {/* Formulário para criar denúncias */}
           <DenunciaForm onDenunciaSubmit={handleDenunciaSubmit} />
