@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef  } from 'react';
 import styles from './Feed.module.css';
 import MapContainer_ from '../../components/MapContent_';
 import DenunciaForm from '../../components/DenunciaForm';
@@ -7,6 +7,9 @@ export default function Feed() {
   const [isDragBarActive, setIsDragBarActive] = useState(false);
   const [denuncias, setDenuncias] = useState([]); // Estado para armazenar as denúncias
   const [dragBarText, setDragBarText] = useState('Denuncias'); // Estado para o texto do dragBar
+
+  const mapRef = useRef(null);
+
 
 
   const handleClick = () => {
@@ -27,7 +30,7 @@ export default function Feed() {
   return (
     <div className={styles.feedContent}>
       <div className={`${styles.left} ${isDragBarActive ? styles.ativo : ''}`}>
-        <MapContainer_ denuncias={denuncias} />
+        <MapContainer_ denuncias={denuncias} mapRef={mapRef} />
       </div>
 
       <div

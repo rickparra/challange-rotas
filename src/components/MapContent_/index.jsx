@@ -1,7 +1,7 @@
 import { GoogleMap, LoadScript, Marker, InfoWindow } from "@react-google-maps/api";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function MapContent_({ denuncias }) {
+export default function MapContent_({ denuncias, mapRef }) {
   const mapContainerStyle = {
     width: "100%",
     height: "100%",
@@ -14,9 +14,33 @@ export default function MapContent_({ denuncias }) {
 
   const [selectedDenuncia, setSelectedDenuncia] = useState(null);
 
+  useEffect(() => {
+    const mapElement = mapRef.current;
+    if (!mapElement) return;
+
+    const disableScroll = () => {
+      mapElement.style.pointerEvents = 'auto';
+    };
+
+    const enableScroll = () => {
+      mapElement.style.pointerEvents = 'none';
+    };
+
+    mapElement.addEventListener('mousedown', disableScroll);
+    mapElement.addEventListener('touchstart', disableScroll);
+    mapElement.addEventListener('mouseup', enableScroll);
+    mapElement.addEventListener('touchend', enableScroll);
+
+    return () => {
+      mapElement.removeEventListener('mousedown', disableScroll);
+      mapElement.removeEventListener('touchstart', disableScroll);
+      mapElement.removeEventListener('mouseup', enableScroll);
+      mapElement.removeEventListener('touchend', enableScroll);
+    };
+  }, [mapRef]);
+
   return (
-    <LoadScript googleMapsApiKey="AIzaSyDPQAq8xtySd-OEqbD5VPzRru08juMEwdo">
-      <GoogleMap
+    <LoadScript googleMapsApiKey="AIzaSyDPQAq8xtySd-OEqbD5VPzRru08juMEwdo">      <GoogleMap
         mapContainerStyle={mapContainerStyle}
         center={defaultCenter}
         zoom={15}
