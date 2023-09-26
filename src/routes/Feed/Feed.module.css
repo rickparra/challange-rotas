@@ -100,10 +100,8 @@
 .feedContainer {
   min-width: 370px;
   margin: 0 0 0 auto;
+  padding: 4rem;
   min-height: 100vh;
-  /* Garante que a seção ocupe toda a altura da tela */
-  padding: 20px;
-
   /* Defina uma borda apenas no lado esquerdo com uma sombra */
   border-left: 0.5px solid #333333; /* Cor da borda à esquerda */
   box-shadow: -5px 0 4px rgba(0, 0, 0, 0.1); /* Sombra à esquerda */
