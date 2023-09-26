@@ -1,5 +1,6 @@
 import { GoogleMap, LoadScript, Marker, InfoWindow } from "@react-google-maps/api";
 import { useState, useEffect } from "react";
+import GoogleMapsConfig from "./GoogleMapsConfig.jsx"; // Importe o componente de configuração
 
 export default function MapContent_({ denuncias, mapRef }) {
   const mapContainerStyle = {
@@ -40,7 +41,8 @@ export default function MapContent_({ denuncias, mapRef }) {
   }, [mapRef]);
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyDPQAq8xtySd-OEqbD5VPzRru08juMEwdo">      <GoogleMap
+    <GoogleMapsConfig> {/* Use o componente de configuração */}
+      <GoogleMap
         mapContainerStyle={mapContainerStyle}
         center={defaultCenter}
         zoom={15}
@@ -72,6 +74,6 @@ export default function MapContent_({ denuncias, mapRef }) {
           </InfoWindow>
         )}
       </GoogleMap>
-    </LoadScript>
+    </GoogleMapsConfig>
   );
 }
