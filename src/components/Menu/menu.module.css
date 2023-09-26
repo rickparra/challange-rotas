@@ -133,7 +133,7 @@
   
     .nav-bar.active{
       background: #070707;
-      height: 250px;
+      height: 270px;
       transform: translateY(0%); /* Exibe o menu no topo da tela */
       box-shadow: 0px 5px 5px -5px rgba(70, 70, 70, 0.75);
     }
