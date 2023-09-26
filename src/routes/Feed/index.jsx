@@ -42,7 +42,7 @@ export default function Feed() {
 
       <div className={styles.right}>
         <div className={`${styles.feedContainer} ${isDragBarActive ? styles.ativo : ''}`}>
-          <h1 className={styles.feedTitle}>Feed</h1>
+          <h1 className={styles.feedTitle}>Denúncias</h1>
           <button onClick={handleClick} className={styles.sairButton}>sair da conta</button>
 
           {/* Formulário para criar denúncias */}

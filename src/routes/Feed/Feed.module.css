@@ -98,7 +98,6 @@
 
 /* Estilos para a .feedContainer (mova esses estilos para o final do seu arquivo CSS) */
 .feedContainer {
-  max-width: 370px;
   min-width: 370px;
   margin: 0 0 0 auto;
   min-height: 100vh;
