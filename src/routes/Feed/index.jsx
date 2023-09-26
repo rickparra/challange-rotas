@@ -1,7 +1,8 @@
-import { useState, useRef  } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from './Feed.module.css';
 import MapContainer_ from '../../components/MapContent_';
 import DenunciaForm from '../../components/DenunciaForm';
+import { useNavigate } from 'react-router-dom';
 
 export default function Feed() {
   const [isDragBarActive, setIsDragBarActive] = useState(false);
@@ -9,11 +10,13 @@ export default function Feed() {
   const [dragBarText, setDragBarText] = useState('Denuncias'); // Estado para o texto do dragBar
 
   const mapRef = useRef(null);
-
-
+  const navigate = useNavigate();
 
   const handleClick = () => {
+    // Limpa o localStorage
     localStorage.clear();
+    // Navega de volta
+    navigate(-1);
   };
 
   const handleDragBarClick = () => {
@@ -43,7 +46,10 @@ export default function Feed() {
       <div className={styles.right}>
         <div className={`${styles.feedContainer} ${isDragBarActive ? styles.ativo : ''}`}>
           <h1 className={styles.feedTitle}>Denúncias</h1>
-          <button onClick={handleClick} className={styles.sairButton}>sair da conta</button>
+
+          <button onClick={handleClick} className={styles.sairButton}>
+            Sair da conta
+          </button>
 
           {/* Formulário para criar denúncias */}
           <DenunciaForm onDenunciaSubmit={handleDenunciaSubmit} />
