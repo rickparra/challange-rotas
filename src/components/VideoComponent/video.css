@@ -71,3 +71,31 @@ video {
   }
 
 }
+
+@media (max-width: 720px) {
+
+  .text-overlay{
+    margin: 3rem;
+  }
+
+  .text-overlay p {
+    font-size: 2..7rem;
+    text-align: left;
+    margin-left: 0rem; 
+  }
+
+  .textoMaquinaEscrever{
+    font-size: 2.7rem;
+    text-align: left;
+    margin-left: 0rem; 
+  }
+  
+  .text-overlay p:nth-child(2) {
+    margin-left: 0rem; 
+  }
+  
+  .text-overlay p:nth-child(3) {
+    margin-left: 0rem;
+  }
+
+}

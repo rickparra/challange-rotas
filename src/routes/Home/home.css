@@ -54,6 +54,30 @@ body {
   /* Ajuste o espaçamento vertical */
 }
 
+/* Para telas menores, alinhe à esquerda e torne mais responsivo */
+@media (max-width: 768px) {
+  .explica {
+    text-align: left; /* Alinhe o texto à esquerda */
+    padding: 10px; /* Reduza o espaçamento interno */
+  }
+
+  .tituloContexto {
+    text-align: left; /* Alinhe o texto à esquerda */
+    padding: 10px; /* Reduza o espaçamento interno */
+  }
+
+  .tituloContexto h1 {
+    font-size: 40px; /* Reduza o tamanho da fonte para títulos h1 */
+  }
+
+  .explica p {
+    font-size: 18px; /* Reduza o tamanho da fonte para o parágrafo */
+    margin-top: 2rem; /* Reduza o espaçamento superior */
+    text-align: left;
+  }
+}
+
+
 
 .cardsContainer {
   display: flex;
@@ -127,7 +151,7 @@ body {
 
 .tituloDiagrama h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 38px;
 }
 
 .tituloDiagrama h1:first-child {

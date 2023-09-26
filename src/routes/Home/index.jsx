@@ -45,7 +45,7 @@ export default function Home() {
                 <Card
                     title="Em Tempo Real"
                     imageUrl="https://blog.cloudflare.com/content/images/2022/01/unnamed-13.png"
-                    body="Nossos Alertas em Tempo Real são uma parte fundamental do nosso sistema de segurança. Eles permitem que os usuários façam denúncias em tempo real sobre incidentes suspeitos ou perigos iminentes."
+                    body="Nossos Alertas em Tempo Real são uma parte fundamental do nosso sistema de segurança. Usuários podem fazer denúncias em tempo real sobre incidentes suspeitos ou perigos."
                 />
 
 
