@@ -12,7 +12,7 @@
 }
 
 .input-field {
-    margin-bottom: 10px; /* Espaçamento inferior entre os campos de entrada */
+    margin: 0.7rem;
 }
 
 .button {
@@ -22,5 +22,4 @@
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
-    margin-top: 10px; /* Espaçamento superior entre o botão e os campos de entrada */
 }

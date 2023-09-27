@@ -74,21 +74,25 @@ export default function MapContent_({ denuncias, mapRef }) {
       >
 
         <div className="map-overlay">
-          <input
-            className="input-field"
-            type="text"
-            placeholder="Local atual"
-            onChange={(e) => setOrigin(e.target.value)}
-          />
-          <input
-            className="input-field"
-            type="text"
-            placeholder="Local final"
-            onChange={(e) => setDestination(e.target.value)}
-          />
-          <button className="button" onClick={buscarDirecoes}>
+          <div className="input-container">
+            <input
+              className="input-field"
+              type="text"
+              placeholder="Local atual"
+              onChange={(e) => setOrigin(e.target.value)}
+            />
+            <input
+              className="input-field"
+              type="text"
+              placeholder="Local final"
+              onChange={(e) => setDestination(e.target.value)}
+            />
+
+<button className="button" onClick={buscarDirecoes}>
             Traçar Rota
           </button>
+          </div>
+          
         </div>
 
         {directions && (
