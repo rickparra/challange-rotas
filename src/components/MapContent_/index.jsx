@@ -1,6 +1,7 @@
-import { GoogleMap, LoadScript, Marker, InfoWindow } from "@react-google-maps/api";
-import { useState, useEffect } from "react";
-import GoogleMapsConfig from "./GoogleMapsConfig.jsx"; // Importe o componente de configuração
+import React, { useState, useEffect } from 'react';
+import { GoogleMap, LoadScript, Marker, DirectionsService, DirectionsRenderer } from "@react-google-maps/api";
+import GoogleMapsConfig from "./GoogleMapsConfig.jsx";
+import "./MapOverlay.css";
 
 export default function MapContent_({ denuncias, mapRef }) {
   const mapContainerStyle = {
@@ -14,6 +15,28 @@ export default function MapContent_({ denuncias, mapRef }) {
   };
 
   const [selectedDenuncia, setSelectedDenuncia] = useState(null);
+  const [origin, setOrigin] = useState(null);
+  const [destination, setDestination] = useState(null);
+  const [directions, setDirections] = useState(null);
+
+  function buscarDirecoes() {
+    const directionsService = new window.google.maps.DirectionsService();
+
+    directionsService.route(
+      {
+        origin,
+        destination,
+        travelMode: window.google.maps.TravelMode.DRIVING,
+      },
+      (result, status) => {
+        if (status === window.google.maps.DirectionsStatus.OK) {
+          setDirections(result);
+        } else {
+          console.error(`Erro ao buscar direções: ${status}`);
+        }
+      }
+    );
+  }
 
   useEffect(() => {
     const mapElement = mapRef.current;
@@ -41,12 +64,37 @@ export default function MapContent_({ denuncias, mapRef }) {
   }, [mapRef]);
 
   return (
-    <GoogleMapsConfig> {/* Use o componente de configuração */}
+    <GoogleMapsConfig>
+
+
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         center={defaultCenter}
         zoom={15}
       >
+
+        <div className="map-overlay">
+          <input
+            className="input-field"
+            type="text"
+            placeholder="Local atual"
+            onChange={(e) => setOrigin(e.target.value)}
+          />
+          <input
+            className="input-field"
+            type="text"
+            placeholder="Local final"
+            onChange={(e) => setDestination(e.target.value)}
+          />
+          <button className="button" onClick={buscarDirecoes}>
+            Traçar Rota
+          </button>
+        </div>
+
+        {directions && (
+          <DirectionsRenderer directions={directions} />
+        )}
+
         {denuncias.map((denuncia, index) => (
           <Marker
             key={index}
