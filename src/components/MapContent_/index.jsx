@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { GoogleMap, LoadScript, Marker, DirectionsService, DirectionsRenderer } from "@react-google-maps/api";
+import { useState, useEffect } from 'react';
+import { GoogleMap, LoadScript, Marker, DirectionsService, DirectionsRenderer, InfoWindow  } from "@react-google-maps/api";
 import GoogleMapsConfig from "./GoogleMapsConfig.jsx";
 import "./MapOverlay.css";
 

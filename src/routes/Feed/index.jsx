@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import styles from './Feed.module.css';
 import MapContainer_ from '../../components/MapContent_';
 import DenunciaForm from '../../components/DenunciaForm';
