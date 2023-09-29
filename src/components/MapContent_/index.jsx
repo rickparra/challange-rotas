@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { GoogleMap, LoadScript, Marker, DirectionsService, DirectionsRenderer, InfoWindow  } from "@react-google-maps/api";
+import { GoogleMap, LoadScript, Marker, DirectionsService, DirectionsRenderer, InfoWindow } from "@react-google-maps/api";
 import GoogleMapsConfig from "./GoogleMapsConfig.jsx";
 import "./MapOverlay.css";
 
@@ -67,6 +67,8 @@ export default function MapContent_({ denuncias, mapRef }) {
     <GoogleMapsConfig>
 
 
+
+
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         center={defaultCenter}
@@ -88,11 +90,11 @@ export default function MapContent_({ denuncias, mapRef }) {
               onChange={(e) => setDestination(e.target.value)}
             />
 
-<button className="button" onClick={buscarDirecoes}>
-            Traçar Rota
-          </button>
+            <button className="button" onClick={buscarDirecoes}>
+              Ir
+            </button>
           </div>
-          
+
         </div>
 
         {directions && (
