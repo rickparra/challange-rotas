@@ -98,9 +98,9 @@
 
 /* Estilos para a .feedContainer (mova esses estilos para o final do seu arquivo CSS) */
 .feedContainer {
-  min-width: 370px;
+  min-width: 350px;
   margin: 0 0 0 auto;
-  padding: 4rem;
+  padding: 2rem;
   min-height: 100vh;
   /* Defina uma borda apenas no lado esquerdo com uma sombra */
   border-left: 0.5px solid #333333; /* Cor da borda à esquerda */
