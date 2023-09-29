@@ -45,7 +45,7 @@
 
 
 /* Media query para ajustar o tamanho em telas menores */
-@media (max-width: 400px) {
+@media (max-width: 340px) {
     .map-overlay {
         padding-top: 3rem; /* Ajuste o espaçamento superior conforme necessário */
     }
