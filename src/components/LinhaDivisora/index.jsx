@@ -1,4 +1,4 @@
-import styles from "./LinhaDivisora.module.css";
+import styles from "./LinhaDivisora.module.scss";
 
 export default function LinhaDivisora() {
     return (

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'; // Importe a biblioteca PropTypes
-import styles from './ChatScreen.module.css';
+import styles from './ChatScreen.module.scss';
 
 export default function ChatScreen({ currentGroup, handleBackToGroups }) {
     return (

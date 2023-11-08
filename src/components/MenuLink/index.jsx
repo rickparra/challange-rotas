@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types'; // Importe a biblioteca PropTypes
 import { Link, useLocation } from 'react-router-dom';
-import styles from './menulink.module.css';
+import styles from './menulink.module.scss';
 
 export default function MenuLink({ children, to, onClick }) {
   const location = useLocation();

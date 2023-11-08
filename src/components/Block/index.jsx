@@ -1,4 +1,4 @@
-import styles from "./Block.module.css"
+import styles from "./Block.module.scss"
 import PropTypes from 'prop-types'; 
 
 export default function Block({title, text}) {

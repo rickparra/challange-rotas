@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import './App.css'
+import './App.scss'
 
 import Rodape from "./components/Rodape";
 import Menu from "./components/Menu";

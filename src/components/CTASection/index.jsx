@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from './CTASection.module.css';
+import styles from './CTASection.module.scss';
 
 export default function CtaSection({ title, text }) {
   return (

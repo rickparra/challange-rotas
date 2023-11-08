@@ -1,4 +1,4 @@
-import styles from './home.css';
+import styles from './home.scss';
 import VideoComponent from '../../components/VideoComponent/index';
 import Card from '../../components/Card';
 import Diagrama from '../../components/PlataformDiagram';

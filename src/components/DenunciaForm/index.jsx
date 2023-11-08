@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './DenunciaForm.module.css'; // Importe o arquivo CSS
+import styles from './DenunciaForm.module.scss'; // Importe o arquivo CSS
 
 
 export default function DenunciaForm({ onDenunciaSubmit }) {

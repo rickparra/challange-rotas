@@ -1,4 +1,4 @@
-import styles from "./about.module.css";
+import styles from "./about.module.scss";
 import BotaoPrincipal from "../../components/BotaoPrincipal";
 import LinhaDivisora from "../../components/LinhaDivisora"
 import Block from "../../components/Block";

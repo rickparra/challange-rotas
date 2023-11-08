@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { GoogleMap, LoadScript, Marker, DirectionsService, DirectionsRenderer, InfoWindow } from "@react-google-maps/api";
 import GoogleMapsConfig from "./GoogleMapsConfig.jsx";
-import "./MapOverlay.css";
+import "./MapOverlay.scss";
 
 export default function MapContent_({ denuncias, mapRef }) {
   const mapContainerStyle = {

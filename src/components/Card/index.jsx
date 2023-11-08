@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'; // Importe a biblioteca PropTypes
 // eslint-disable-next-line no-unused-vars
-import styles from './Card.css';
+import styles from './Card.scss';
 
 export default function Card({ title, imageUrl, body }) {
     return (

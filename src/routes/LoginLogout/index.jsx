@@ -1,4 +1,4 @@
-import styles from "./LoginLogout.module.css";
+import styles from "./LoginLogout.module.scss";
 import { useState, useRef, useEffect } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Feed from "../Feed";

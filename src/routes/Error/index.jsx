@@ -1,4 +1,4 @@
-import styles from "./error.module.css"
+import styles from "./error.module.scss"
 import erro_404 from "../../assets/erro_404.png"
 import BotaoPrincipal from "../../components/BotaoPrincipal"
 import { useNavigate } from "react-router-dom"

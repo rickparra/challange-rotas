@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import styles from './Feed.module.css';
+import styles from './Feed.module.scss';
 import MapContainer_ from '../../components/MapContent_';
 import DenunciaForm from '../../components/DenunciaForm';
 import { useNavigate } from 'react-router-dom';

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from "./BotaoPrincipal.module.css";
+import styles from "./BotaoPrincipal.module.scss";
 
 function BotaoPrincipal({ children, tamanho }) {
   return (
