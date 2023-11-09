@@ -3,6 +3,7 @@ import BotaoPrincipal from "../../components/BotaoPrincipal";
 import LinhaDivisora from "../../components/LinhaDivisora"
 import Block from "../../components/Block";
 import CtaSection from "../../components/CTASection";
+//Exposição da página
 
 export default function About() {
     return (
