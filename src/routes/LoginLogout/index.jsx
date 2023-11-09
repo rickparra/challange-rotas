@@ -40,7 +40,6 @@ export default function LoginLogout() {
     window.location.reload();
   };
 
-  // Função para criar uma conta
 const createUserAccount = async () => {
   const inputUsername = userData.username.trim();
   const inputPassword = userData.password.trim();
