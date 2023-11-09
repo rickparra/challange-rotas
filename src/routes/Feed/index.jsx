@@ -3,6 +3,7 @@ import styles from './Feed.module.scss';
 import MapContainer_ from '../../components/MapContent_';
 import DenunciaForm from '../../components/DenunciaForm';
 import { useNavigate } from 'react-router-dom';
+//Página do mapa
 
 export default function Feed() {
   const [isDragBarActive, setIsDragBarActive] = useState(false);
