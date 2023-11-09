@@ -4,6 +4,7 @@ import Card from '../../components/Card';
 import Diagrama from '../../components/PlataformDiagram';
 import Products from '../../components/Products';
 import CtaSection from '../../components/CTASection';
+//Página principal de entrada
 
 export default function Home() {
 
