@@ -3,7 +3,7 @@ LINK DO DEPLOY: https://challange-rotas.vercel.app/
 # UrbanShield - Projeto de Segurança Pública
 
 1. **Cadastro na Plataforma:**
-   - Para acessar todas as funcionalidades do UrbanShield, é necessário criar uma conta na pagina de login.
+   - Para acessar todas as funcionalidades do UrbanShield, é necessário criar uma conta na pagina de login e após isso fazer o login.
 
 2. **Integração com APIs do Google:**
    - O UrbanShield utiliza três APIs do Google para aprimorar suas funcionalidades:
