@@ -1,3 +1,5 @@
+LINK DO DEPLOY: https://challange-rotas.vercel.app/
+
 # UrbanShield - Projeto de Segurança Pública
 
 1. **Cadastro na Plataforma:**
