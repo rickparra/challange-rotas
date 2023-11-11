@@ -14,7 +14,7 @@ O UrbanShield oferece as seguintes funcionalidades:
 
 - **Página de Login:** Uma interface segura para que os usuários possam acessar a plataforma e aproveitar todas as suas funcionalidades.
 
-- **Página de Fazer Denúncias:** Uma parte crítica da nossa plataforma, onde os cidadãos podem reportar incidentes de segurança em tempo real, contribuindo para a coleta de dados para análises posteriores.
+- **Página de Fazer Denúncias:** Assim que o usúario fazer o login, vai ter aceesso a uma parte crítica da nossa plataforma, onde os cidadãos podem reportar incidentes de segurança em tempo real, contribuindo para a coleta de dados para análises posteriores.
 
 ### Como Funciona
 
