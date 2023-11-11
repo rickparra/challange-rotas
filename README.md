@@ -1,5 +1,19 @@
 # UrbanShield - Projeto de Segurança Pública
 
+1. **Cadastro na Plataforma:**
+   - Para acessar todas as funcionalidades do UrbanShield, é necessário criar uma conta na pagina de login.
+
+2. **Integração com APIs do Google:**
+   - O UrbanShield utiliza três APIs do Google para aprimorar suas funcionalidades:
+     - **Google Maps API:** Responsável pela exibição de mapas e localização.
+     - **Google Maps Marker API:** Utilizada para adicionar marcadores e informações ao mapa.
+     - **Google Routes API:** Essencial para o cálculo e exibição de rotas seguras na plataforma.
+
+3. **Acesso à Página de Denúncias:**
+   - Após realizar o login, os usuários terão acesso à página de fazer denúncias. Contribua para a segurança urbana reportando incidentes em tempo real.
+
+Com esses passos, você estará pronto para explorar todas as funcionalidades do UrbanShield e aproveitar uma experiência mais segura e informada ao planejar suas atividades na cidade.
+
 ## Descrição do Projeto
 
 O UrbanShield é uma plataforma de segurança pública voltada para melhorar a qualidade de vida dos cidadãos em áreas urbanas, inicialmente em São Paulo. Nosso projeto utiliza tecnologias avançadas, incluindo Internet das Coisas (IoT) e Inteligência Artificial (IA), para abordar problemas de segurança nas ruas da cidade.
